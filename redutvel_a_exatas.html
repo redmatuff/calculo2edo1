@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Redutível a exatas | Equações Diferenciais Ordinárias de Primeira Ordem </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Begoña Alarcón Cotillas" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site exe-auto-math" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar navegação</a></p>
+<header id="header" ><div id="headerContent">Equações Diferenciais Ordinárias de Primeira Ordem</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">EDO de primeira ordem</a></li>
+   <li><a href="interpretao_geomtrica.html" class="no-ch">Interpretação geométrica</a></li>
+   <li><a href="separao_de_variveis.html" class="no-ch">Separação de variáveis</a></li>
+   <li><a href="lineares.html" class="no-ch">Lineares</a></li>
+   <li><a href="exatas.html" class="no-ch">Exatas</a></li>
+   <li id="active"><a href="redutvel_a_exatas.html" class="active no-ch">Redutível a exatas</a></li>
+   <li><a href="geogebra_campo_de_direes.html" class="no-ch">Geogebra: Campo de direções</a></li>
+   <li><a href="exerccios.html" class="no-ch">Exercícios</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="exatas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="geogebra_campo_de_direes.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Redutível a exatas</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_announcement_white" id="id63">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_announcement_white.png)"><span class="iDeviceTitle">&nbsp;</span></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta63_124_2" class="block iDevice_content">
+<div class="exe-text"><p>Já chegou até aqui? Sem pular etapas? Parabéns!!!! Uhuuuu</p>
+<p>Agora veremos um tipo de EDO que não é exata, mas mesmo assim existe uma função mágica \(\mu(x,y)\) que transforma a EDO em exata. Essa função é chamada de fator integrante. </p>
+<p>Sim, este fator integrante é irmãozinho do fator integrante das <a href="lineares.html" title="Acesse aqui o conteúdo" class="exe-tooltip plain-tt">EDO lineares</a>. Você está certo!</p>
+<p>Vamos tentar resolver a EDO \((e^{2x}+y-1)\, dx-dy=0,\) sabendo que \(\mu=e^{-x}\) é um fator integrante.</p>
+<p>Fazendo \(M(x,y)=e^{2x}+y-1\) e \(N(x,y)=-1\), vemos que </p>
+<p>\(\dfrac{\partial M}{\partial y} =1\) e \(\dfrac{\partial N}{\partial x} = 0.\)</p>
+<p>Como \(\dfrac{\partial M}{\partial y} \neq \dfrac{\partial N}{\partial x}\)​, a equação não é exata.</p>
+<p>Vamos multiplicar a EDO pela função \(\mu(x)=e^{-x}\):</p>
+<p>\(e^{-x}(e^{2x}+y-1)\,dx-e^{-x}\,dy=0.\)</p>
+<p>Simplificando:</p>
+<p>\(e^{x}+(y-1)e^{-x}) \, dx -e^{-x} \, dy = 0.\)</p>
+<p>Verifiquemos que agora que sim é exata:</p>
+<p>Identificamos \(M(x,y)=e^{x}+(y-1)e^{-x}\) e \(N(x,y)=-e^{-x}\)</p>
+<p>Calculamos as parciais, </p>
+<p>\(\dfrac{\partial M}{\partial y} = e^{-x}\) e \(\dfrac{\partial N}{\partial x} = e^{-x}.\)</p>
+<p>Como \(\dfrac{\partial M}{\partial y} = \dfrac{\partial N}{\partial x}\), a nova equação sim é exata.</p>
+<p>E sendo exata, podemos <a href="exatas.html" title="Acesse aqui o conteúdo de exatas" class="exe-tooltip plain-tt">resolvê-la normalmente</a>.</p>
+<p>Integramos \(N(x,y)\) em relação a \(y\) para encontrar a expressão de \(f(x,y)\):</p>
+<p>\(f(x,y)=\displaystyle\int N(x,y)dy + h(x)=\displaystyle\int -e^{-x}dy + h(x)=-e^{-x}y+h(x)\)</p>
+<p>Derivamos a expressão anterior em relação a \(x\) e igualamos a \(M(x,y)):</p>
+<p>\(e^{-x}y+h'(x)=e^{x}+(y-1)e^{-x}\)</p>
+<p>Simplificando:</p>
+<p>\(h'(x)=e^{x}-e^{-x}\)</p>
+<p>Derivando:</p>
+<p>\(h(x)=e^{x}+e^{-x}\)</p>
+<p>Então a função potencial é:</p>
+<p>\(f(x,y)=-e^{-x}y+e^{x}+e^{-x}\)</p>
+<p>E a solução geral da EDO é:</p>
+<p>\(-e^{-x}y+e^{x}+e^{-x}=C,\) onde \(C\) é uma constante arbitrária.</p>
+<p>ou equivalentemente,</p>
+<p>\(y=e^{x}\left(C+e^{x}+e^{-x}\right)=Ce^x+e^{2x}+1,\) onde \(C\) é uma constante arbitrária.</p>
+<figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="img0.3.png" alt="" width="300" height="353" />
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Campo de direções \(y'=e^{2x}+y-1\)</em></span></figcaption>
+</figure></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_assignment" id="id64">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment.png)"><h1 class="iDeviceTitle">CÁLCULO DO FATOR INTEGRANTE</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_125_2" class="block iDevice_content">
+<div class="exe-text"><p>Agora vem a parte complicada... Como calculo esse fator integrante?</p>
+<p>Lembrando que queremos encontrar uma função \(\mu(x,y)\) tal que </p>
+<p>\[\mu(x,y) M(x,y)dx+\mu(x,y)N(x,y)=0\]</p>
+<p>seja exata.</p>
+<p>Para isso \(\frac{\partial (\mu M)}{\partial y} = \frac{\partial (\mu N)}{\partial x}\)</p>
+<p>Vamos abrir essas <a title="Detalhe!" class="exe-dialog-link" rel="lightbox" href="#te28173ed-b6b2-5c37-e37f-3abc58656973" id="linke28173ed-b6b2-5c37-e37f-3abc58656973">parciais</a>:</p>
+<p>\( M\,\mu_y+ M_y \,\mu= N \,\mu_x+ N_x\,\mu \quad \) (1)</p>
+<p>Para simplificar as contas, vamos distinguir três casos:</p>
+<p><strong>Caso 1: \(\mu\) só depende de \(x\).</strong></p>
+<p>Então \(\mu_y=0\) e podemos simplificar a equação (1):</p>
+<p>\( M_y\, \mu = N\,\dfrac{d\mu}{dx} + N_x \,\mu\)</p>
+<p>Isolando \(\dfrac{d\mu}{dx}\) obtemos a seguinte expressão: </p>
+<p>\(\dfrac{d\mu}{dx}=\dfrac{M_y-N_x}{N}\, \mu\) (2)</p>
+<p>Agora vem a parte importante. <strong>Se \(\dfrac{M_y-N_x}{N}\) não depender de \(y\)</strong>. Então (2) é uma EDO linear de primeira ordem.</p>
+<p>Resolvendo essa EDO:</p>
+<p>\(\displaystyle{\mu(x)=e^{\int\, \frac{M_y-N_x}{N}\, dx}}\)</p>
+<p><strong>Caso 2: \(\mu\) só depende de \(y\).</strong></p>
+<p>Então \(\mu_x=0\) e podemos simplificar a expressão (1):</p>
+<p>\( M\,\dfrac{d\mu}{dy}+ M_y \,\mu= N_x\,\mu\)</p>
+<p>Isolando \(\dfrac{d\mu}{dy}\) obtemos a seguinte expressão: </p>
+<p>\(\dfrac{d\mu}{dy}=\dfrac{N_x-M_y}{M}\, \mu\) (3)</p>
+<p>Agora vem a parte importante. Se <strong>\(\dfrac{N_x-M_y}{M}\) não depender de \(x\)</strong>. Então (3) é uma EDO linear de primeira ordem.</p>
+<p>Resolvendo essa EDO:</p>
+<p>\(\displaystyle{\mu(y)=e^{\int\, \frac{N_x-M_y}{M}\, dy}}\)</p>
+<p><strong>Caso 3: \(\mu\) depende de \(x\) e de \(y\).</strong></p>
+<p>Nesse caso, vamos ter que esperar a um cálculo mais avançado porque a equação (1) seria uma Equação em Derivadas Parciais (EDP) e nesse curso somente estudamos Equações Diferenciais Ordinárias (EDO).</p>
+<p>A resposta seria, não admite fator integrante. Embora possa admitir em um caso mais geral do que o contemplado nesse texto.</p>
+<div id="te28173ed-b6b2-5c37-e37f-3abc58656973" class="exe-dialog-text js-hidden">
+<p>\(f_x\) denota a derivada parcial da função \(f\) em relação a \(x\), isto é, \(\frac{\partial f}{\partial x}\). Analogamente, \(f_y\) denota a derivada parcial da função \(f\) em relação a \(y\), isto é, \(\frac{\partial f}{\partial y}\)</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Sob licença</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição Compartilha Igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="exatas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="geogebra_campo_de_direes.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (Nova janela)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Lineares | Equações Diferenciais Ordinárias de Primeira Ordem </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Begoña Alarcón Cotillas" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site exe-auto-math" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar navegação</a></p>
+<header id="header" ><div id="headerContent">Equações Diferenciais Ordinárias de Primeira Ordem</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">EDO de primeira ordem</a></li>
+   <li><a href="interpretao_geomtrica.html" class="no-ch">Interpretação geométrica</a></li>
+   <li><a href="separao_de_variveis.html" class="no-ch">Separação de variáveis</a></li>
+   <li id="active"><a href="lineares.html" class="active no-ch">Lineares</a></li>
+   <li><a href="exatas.html" class="no-ch">Exatas</a></li>
+   <li><a href="redutvel_a_exatas.html" class="no-ch">Redutível a exatas</a></li>
+   <li><a href="geogebra_campo_de_direes.html" class="no-ch">Geogebra: Campo de direções</a></li>
+   <li><a href="exerccios.html" class="no-ch">Exercícios</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="separao_de_variveis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="exatas.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Lineares</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_announcement" id="id52">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_announcement.png)"><span class="iDeviceTitle">&nbsp;</span></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta52_121_2" class="block iDevice_content">
+<div class="exe-text"><p>Consideremos agora a EDO \(\frac{dx}{dy}​+2y=3x\).</p>
+<p>Isolando a derivada, temos que \(\frac{dx}{dy}​=3x-2y\), que já não é mais do tipo \(g(x)h(y)\). Que pena, né? Tranquilo... O método que vem agora ainda é mais ou menos simples!</p>
+<p>A EDO \(\frac{dx}{dy}​+2y=3x\) não é do tipo de separação de variáveis, mas se você se lembra do <a href="http://www.gma.uff.br/redmat/cal2edointro" target="_blank" title="Introdução as EDO" rel="noopener">capítulo anterior</a>, essa EDO é linear de primeira ordem.</p>
+<p>O que podemos fazer, então?</p>
+<p>Vamos multiplicar a EDO toda por uma função mágica, chamada de fator integrante, \(\mu(x)=e^{2x}\):</p>
+<p>\(e^{2x}(y'​+2y)=e^{2x}(3x)\)</p>
+<p>Equivalentemente, \(e^{2x}y'+2y\,e^{2x}=3x\,e^{2x}.\)</p>
+<p>Observe que \(e^{2x}y'​+2y\,e^{2x}\) é a derivada do produto \(e^{2x}y\). Portanto, podemos reescrever a EDO \(e^{2x}y'+2y\,e^{2x}=3x\,e^{2x}\) como:</p>
+<p>\(\left(e^{2x}y\right)^\prime=3x\,e^{2x}.\)</p>
+<p>Obaaa Não ficou feliz?? Caímos em uma EDO da <a href="http://www.gma.uff.br/redmat/cal2edointro" target="_blank" rel="noopener">introdução</a>. Agora só precisamos encontrar uma primitiva, à moda de Cálculo 1. </p>
+<p>Integrando os dois lados da EDO em relação a \(x\):</p>
+<p>\[e^{2x}y=\int \;3x\,e^{2x}\, dx=\dfrac{3}{4} (-1 + 2 x) e^{2x} +C\]</p>
+<p class="js-required"><input type="button" value="Cálculo da integral" onclick="$('#calint1').toggle()" /></p>
+<div id="calint1" class="js-hidden">
+<p>Resolveremos a integral \(\int 3x e^{2x} \, dx \) utilizando o método de integração por partes.</p>
+<p>Escolhemos:<br />\[<br />u = 3x \quad \text{e} \quad dv = e^{2x} \, dx<br />\]</p>
+<p>Agora, derivamos \(u\) e integramos \(dv\):<br />\[<br />du = 3 \, dx \quad \text{e} \quad v = \int e^{2x} \, dx = \frac{1}{2} e^{2x}<br />\]</p>
+<p>Substituímos os valores na fórmula \(\int u \, dv = uv - \int v \, du \)</p>
+<p>\[\int 3x e^{2x} \, dx = \left(3x \cdot \frac{1}{2} e^{2x}\right) - \int \left(\frac{1}{2} e^{2x} \cdot 3 \, dx\right)<br />\]</p>
+<p>Simplificamos os termos:<br />\[<br />\int 3x e^{2x} \, dx = \frac{3}{2}x e^{2x} - \frac{3}{2} \int e^{2x} \, dx<br />\]</p>
+<p>Sabendo que, \(<br />\int e^{2x} \, dx = \frac{1}{2} e^{2x}+C<br />\) aplicando substituição, obtemos que:</p>
+<p>\[<br />\int 3x e^{2x} \, dx = \frac{3}{2}x e^{2x} - \frac{3}{2} \cdot \frac{1}{2} e^{2x}=<br />\dfrac{3}{4} (-1 + 2 x) e^{2x} +C<br />\]</p>
+</div>
+<p>Isolando \(y\):</p>
+<p>\[y=e^{-2x}\left(\dfrac{3}{4} (-1 + 2 x) e^{2x}+C\right) \]</p>
+<p>Simplificando, a solução geral da EDO \(\frac{dx}{dy}​+2y=3x\) é:</p>
+<p>\[y=\dfrac{3}{4} (-1 + 2 x) +Ce^{-2x}, \; \forall x\in \mathbb{R} \]</p>
+<p>O campo de vetores é o seguinte. As curvas vermelhas representam as curvas integrais dadas pela solução geral da EDO:</p>
+<figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="campo3x_2y.png" alt="" title="Campo de vetores y'=3x-2y" width="300" height="286" />
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Campo de direções \(y'=3x-2y\)</em></span></figcaption>
+</figure>
+<p>Viu como não é tão complicado? Que não... sério... hehe</p>
+<p>A parte que ficou em falta nesse exemplo é como calcular essa função mágica chamada de fator integrante. A seguir explicaremos o método geral. Força!</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_assignment" id="id53">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment.png)"><h1 class="iDeviceTitle">MÉTODO DAS EQUAÇÕES LINEARES DE PRIMEIRA ORDEM</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta53_122_2" class="block iDevice_content">
+<div class="exe-text"><p>Lembra da fórmula geral das Equações Diferenciais Lineares de Primeira Ordem? Se não, dá uma olhada no conteúdo do capítulo de <a href="http://www.gma.uff.br/cal2edointro" target="_blank" rel="noopener">introdução</a> às EDO!</p>
+<p>Ele é \(a_1(x) y' +a_0(x)y=f(x),\)</p>
+<p>onde \(a_1(x),\;\) \(a_0(x)\;\) e \(f(x)\;\) são funções contínuas.</p>
+<p>Primeiro de tudo, dividiremos por \(a_1(x),\;\) para deixar \(y'\) com coeficiente \(1\). </p>
+<p>\[y'+P(x)y=Q(x),\]</p>
+<p>onde \(P(x)=\dfrac{a_0(x)}{a_1(x)}\) e \(Q(x)=\dfrac{g(x)}{a_1(x)}.\)</p>
+<p>Isso se chama <strong>passar à forma padrão</strong>. Observe que somente faz sentido quando \(a_1(x)\neq 0.\) Esse detalhe definirá o intervalo de definição de nossas soluções!!!</p>
+<p>Observe que no exemplo anterior, \(P(x)=2\) e \(Q(x)=3x\). E o fator integrante era \(\mu(x)= e^{\int\, P(x)\, dx}= e^{\int\, 2\, dx}=e^{2x}\). Leal, né?</p>
+<p><strong>Método de EDO lineares de primeira ordem:</strong> Se a EDO é da forma \[y'+P(x)y=Q(x),\] então multiplicaremos pelo fator integrante \[\mu(x)= e^{\int\, P(x)\, dx}\] e a solução geral da EDO vem dada pela equação \[\left(\mu(x) \cdot y\right)^\prime = \mu(x)\cdot Q(x)\]</p>
+<p>Donde, \[y= \dfrac{1}{\mu(x)} \left(\int\; \mu(x)\cdot Q(x)\; dx+C\right)\]</p>
+<p><strong>Resumo:</strong><br />O método para resolver EDO lineares de primeira ordem é uma técnica exclusiva para resolver este tipo de equações diferenciais. Os passos são:</p>
+<p>1. Passar à forma padrão \(y'+P(x)y=Q(x)\) e identificar \(P(x)\) e \(Q(x).\)<br />2. Multiplicar a EDO em forma padrão pelo fator integrante \(\mu(x)= e^{\int\, P(x)\, dx}\): \[\mu(x)y'+\mu(x)P(x)y=\mu(x)Q(x)\] <br />3. Reparar que o lado esquerdo da equação \(\mu(x)y'+\mu(x)P(x)y\) é a derivada de \(\mu(x)y\) e reescrever a EDO \[\left(\mu(x)y\right)^\prime=\mu(x)Q(x)\] <br />4. Integrar os dois lados \[\mu(x)y=\int\;\mu(x)Q(x)\;dx+C\] <br />5. Isolar \(y\) <br />6. Usar a condição inicial, se disponível, para encontrar a solução particular.</p>
+<p>Esse método funciona porque o fator integrante transforma a equação original em algo "organizado", onde o lado esquerdo vira a derivada de um produto e o lado direito não depende de \(y\). É como limpar uma mesa cheia de papeis e canetas antes de começar a trabalhar.</p>
+<p>A continuação propomos alguns exercícios para você treinar. Força!!</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id69">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Teste sua leitura</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-69_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion69_86" class="block question iDevice_content">
+<p><img src="1.PNG" alt="" width="40" height="40" />Qual é a solução geral da seguinte EDO? \[<br />\frac{dy}{dx} + y = e^x<br />\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_89" class="sr-av"><a href="#answer-69_89">Opção 1</a></label><input type="radio" name="option69_86" id="i69_89" class="exe-radio-option exe-radio-option-0-4-69_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_89"><div id="taans69_89" class="block iDevice_content">
+<p>\(y = e^x + Ce^{-x}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_92" class="sr-av"><a href="#answer-69_92">Opção 2</a></label><input type="radio" name="option69_86" id="i69_92" class="exe-radio-option exe-radio-option-1-4-69_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_92"><div id="taans69_92" class="block iDevice_content">
+<p>\(y = \frac{1}{2}e^x + Ce^{-x}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_765" class="sr-av"><a href="#answer-69_765">Opção 3</a></label><input type="radio" name="option69_86" id="i69_765" class="exe-radio-option exe-radio-option-2-4-69_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_765"><div id="taans69_765" class="block iDevice_content">
+<p>\(y = e^x - Ce^{-x}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_768" class="sr-av"><a href="#answer-69_768">Opção 4</a></label><input type="radio" name="option69_86" id="i69_768" class="exe-radio-option exe-radio-option-3-4-69_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_768"><div id="taans69_768" class="block iDevice_content">
+<p>\(y = e^{-x} + Ce^x\)</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b69_86" class="feedback js-hidden">
+<div id="taf69_89" class=" iDevice_content">
+<p>Errada. O coeficiente de e^x deveria ser \frac{1}{2}​, não 1. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa1b69_86" class="feedback js-hidden">
+<div id="taf69_92" class=" iDevice_content">
+<p>Correta! Parabéns!</p>
+</div>
+</section>
+<section id="sa2b69_86" class="feedback js-hidden">
+<div id="taf69_765" class=" iDevice_content">
+<p>Errada. O sinal do termo Ce^{-x} está incorreto. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa3b69_86" class="feedback js-hidden">
+<div id="taf69_768" class=" iDevice_content">
+<p>Errada. Os termos estão invertidos e o coeficiente de e^x é incorreto. Tente de novo! Força!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-69_89">Errado</a><span> (<a href="#sa0b69_86">Feedback</a>)</span></li>
+<li><a href="#answer-69_92">Opção correta</a><span> (<a href="#sa1b69_86">Feedback</a>)</span></li>
+<li><a href="#answer-69_765">Errado</a><span> (<a href="#sa2b69_86">Feedback</a>)</span></li>
+<li><a href="#answer-69_768">Errado</a><span> (<a href="#sa3b69_86">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-69_95" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion69_95" class="block question iDevice_content">
+<p><img src="2.PNG" alt="" width="40" height="40" />Qual é a solução geral da seguinte EDO? \[<br />\frac{dy}{dx} + 2xy = x^2<br />\]</p>
+<p> </p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_98" class="sr-av"><a href="#answer-69_98">Opção 1</a></label><input type="radio" name="option69_95" id="i69_98" class="exe-radio-option exe-radio-option-0-4-69_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_98"><div id="taans69_98" class="block iDevice_content">
+<p>\(y = \frac{1}{2}(x^2 - 1) + Ce^{-x^2}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_101" class="sr-av"><a href="#answer-69_101">Opção 2</a></label><input type="radio" name="option69_95" id="i69_101" class="exe-radio-option exe-radio-option-1-4-69_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_101"><div id="taans69_101" class="block iDevice_content">
+<p>\(y = \frac{x^2}{2} + \frac{1}{2} + Ce^{-x^2}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_772" class="sr-av"><a href="#answer-69_772">Opção 3</a></label><input type="radio" name="option69_95" id="i69_772" class="exe-radio-option exe-radio-option-2-4-69_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_772"><div id="taans69_772" class="block iDevice_content">
+<p>\(y = \frac{1}{2}x^2 + Ce^{x^2}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_775" class="sr-av"><a href="#answer-69_775">Opção 4</a></label><input type="radio" name="option69_95" id="i69_775" class="exe-radio-option exe-radio-option-3-4-69_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_775"><div id="taans69_775" class="block iDevice_content">
+<p>\(y = Ce^{-x^2}\)</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b69_95" class="feedback js-hidden">
+<div id="taf69_98" class=" iDevice_content">
+<p>Correta! Parabéns!</p>
+</div>
+</section>
+<section id="sa1b69_95" class="feedback js-hidden">
+<div id="taf69_101" class=" iDevice_content">
+<p>Errada. Há um erro de sinal, a fração +\frac{1}{2} deveria ser -\frac{1}{2}. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa2b69_95" class="feedback js-hidden">
+<div id="taf69_772" class=" iDevice_content">
+<p>Errada. O fator exponencial deveria ser e^{-x^2}, não e^{x^2}. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa3b69_95" class="feedback js-hidden">
+<div id="taf69_775" class=" iDevice_content">
+<p> Errada. Não inclui o termo particular relacionado a x^2. Parece que você zerou a integral. Tente de novo! Força!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-69_98">Opção correta</a><span> (<a href="#sa0b69_95">Feedback</a>)</span></li>
+<li><a href="#answer-69_101">Errado</a><span> (<a href="#sa1b69_95">Feedback</a>)</span></li>
+<li><a href="#answer-69_772">Errado</a><span> (<a href="#sa2b69_95">Feedback</a>)</span></li>
+<li><a href="#answer-69_775">Errado</a><span> (<a href="#sa3b69_95">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-69_778" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion69_778" class="block question iDevice_content">
+<p><img src="3.PNG" alt="" width="40" height="40" />Qual é a solução do seguinte PVI? <br />\[<br />\begin{cases}\frac{dy}{dx} - y = 3x, \\ y(0) = 1\end{cases}<br />\]</p>
+<p> </p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_781" class="sr-av"><a href="#answer-69_781">Opção 1</a></label><input type="radio" name="option69_778" id="i69_781" class="exe-radio-option exe-radio-option-0-4-69_778-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_781"><div id="taans69_781" class="block iDevice_content">
+<p>\(y = 3x - 1 + 4e^x\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_784" class="sr-av"><a href="#answer-69_784">Opção 2</a></label><input type="radio" name="option69_778" id="i69_784" class="exe-radio-option exe-radio-option-1-4-69_778-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_784"><div id="taans69_784" class="block iDevice_content">
+<p>\(y = 3x + Ce^x\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_787" class="sr-av"><a href="#answer-69_787">Opção 3</a></label><input type="radio" name="option69_778" id="i69_787" class="exe-radio-option exe-radio-option-2-4-69_778-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_787"><div id="taans69_787" class="block iDevice_content">
+<p>\(y = -3x - 1 + 2e^x\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_790" class="sr-av"><a href="#answer-69_790">Opção 4</a></label><input type="radio" name="option69_778" id="i69_790" class="exe-radio-option exe-radio-option-3-4-69_778-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_790"><div id="taans69_790" class="block iDevice_content">
+<p>\(y = -3x - 3 + 4e^x\) </p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b69_778" class="feedback js-hidden">
+<div id="taf69_781" class=" iDevice_content">
+<p>Errada. O termo 3x3x3x está com o sinal errado. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa1b69_778" class="feedback js-hidden">
+<div id="taf69_784" class=" iDevice_content">
+<p>Errada. Parece que você calculou errado a integral. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa2b69_778" class="feedback js-hidden">
+<div id="taf69_787" class=" iDevice_content">
+<p>Errada. O termo constante −1 é incorreto, e o coeficiente do termo exponencial 2 está errado. Isso tem a ver com a integral e/ou na hora de calcular C. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa3b69_778" class="feedback js-hidden">
+<div id="taf69_790" class=" iDevice_content">
+<p>Correta! Parabéns!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-69_781">Errado</a><span> (<a href="#sa0b69_778">Feedback</a>)</span></li>
+<li><a href="#answer-69_784">Errado</a><span> (<a href="#sa1b69_778">Feedback</a>)</span></li>
+<li><a href="#answer-69_787">Errado</a><span> (<a href="#sa2b69_778">Feedback</a>)</span></li>
+<li><a href="#answer-69_790">Opção correta</a><span> (<a href="#sa3b69_778">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-69_793" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion69_793" class="block question iDevice_content">
+<p><img src="C__Users_avela_OneDrive_Desktop_Monitoria_4.PNG" alt="" width="40" height="40" />Qual é a solução da seguinte EDO que passa pelo ponto \((1,0)\)?<br />\[<br />x \frac{dy}{dx} + 2y = x^3<br />\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_796" class="sr-av"><a href="#answer-69_796">Opção 1</a></label><input type="radio" name="option69_793" id="i69_796" class="exe-radio-option exe-radio-option-0-4-69_793-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_796"><div id="taans69_796" class="block iDevice_content">
+<p>\(y = \frac{x^3}{3} - \frac{1}{3x^2}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_799" class="sr-av"><a href="#answer-69_799">Opção 2</a></label><input type="radio" name="option69_793" id="i69_799" class="exe-radio-option exe-radio-option-1-4-69_793-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_799"><div id="taans69_799" class="block iDevice_content">
+<p>\(y = \frac{x^3}{5} + \frac{1}{x^2}\) </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_803" class="sr-av"><a href="#answer-69_803">Opção 3</a></label><input type="radio" name="option69_793" id="i69_803" class="exe-radio-option exe-radio-option-2-4-69_793-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_803"><div id="taans69_803" class="block iDevice_content">
+<p>\(y = \frac{x^3}{5} - \frac{1}{5x^2}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_806" class="sr-av"><a href="#answer-69_806">Opção 4</a></label><input type="radio" name="option69_793" id="i69_806" class="exe-radio-option exe-radio-option-3-4-69_793-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_806"><div id="taans69_806" class="block iDevice_content">
+<p>\(y = -\frac{x^3}{5} - \frac{1}{5x^2}\)</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b69_793" class="feedback js-hidden">
+<div id="taf69_796" class=" iDevice_content">
+<p>Errada. O denominador dos coeficientes deve ser 5, não 3. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa1b69_793" class="feedback js-hidden">
+<div id="taf69_799" class=" iDevice_content">
+<p>Errada. O termo constante de x^{-2} tem o sinal errado. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa2b69_793" class="feedback js-hidden">
+<div id="taf69_803" class=" iDevice_content">
+<p>Correta! Parabéns!</p>
+</div>
+</section>
+<section id="sa3b69_793" class="feedback js-hidden">
+<div id="taf69_806" class=" iDevice_content">
+<p>Errada. O sinal do termo \frac{x^3}{5}​ é incorreto. Tente de novo! Força!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-69_796">Errado</a><span> (<a href="#sa0b69_793">Feedback</a>)</span></li>
+<li><a href="#answer-69_799">Errado</a><span> (<a href="#sa1b69_793">Feedback</a>)</span></li>
+<li><a href="#answer-69_803">Opção correta</a><span> (<a href="#sa2b69_793">Feedback</a>)</span></li>
+<li><a href="#answer-69_806">Errado</a><span> (<a href="#sa3b69_793">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-69_809" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion69_809" class="block question iDevice_content">
+<p><img src="5.PNG" alt="" width="40" height="40" />Qual é a solução geral da seguinte EDO?<br />\[<br />\frac{dy}{dx} + 3y = e^x + \sin(x)<br />\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_812" class="sr-av"><a href="#answer-69_812">Opção 1</a></label><input type="radio" name="option69_809" id="i69_812" class="exe-radio-option exe-radio-option-0-4-69_809-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_812"><div id="taans69_812" class="block iDevice_content">
+<p>(A) \(y = \frac{e^x}{3} + \frac{\cos(x)}{10} + \frac{\sin(x)}{10} + Ce^{-3x}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_815" class="sr-av"><a href="#answer-69_815">Opção 2</a></label><input type="radio" name="option69_809" id="i69_815" class="exe-radio-option exe-radio-option-1-4-69_809-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_815"><div id="taans69_815" class="block iDevice_content">
+<p>\(y = \frac{e^x}{3} - \frac{\cos(x)}{10} + \frac{\sin(x)}{10} + Ce^{-3x}\) </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_819" class="sr-av"><a href="#answer-69_819">Opção 3</a></label><input type="radio" name="option69_809" id="i69_819" class="exe-radio-option exe-radio-option-2-4-69_809-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_819"><div id="taans69_819" class="block iDevice_content">
+<p>\(y = Ce^{-3x}\)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i69_822" class="sr-av"><a href="#answer-69_822">Opção 4</a></label><input type="radio" name="option69_809" id="i69_822" class="exe-radio-option exe-radio-option-3-4-69_809-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-69_822"><div id="taans69_822" class="block iDevice_content">
+<p>\(y = \frac{e^x}{3} + Ce^{-3x}\)</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b69_809" class="feedback js-hidden">
+<div id="taf69_812" class=" iDevice_content">
+<p>Errada. O termo \frac{\cos(x)}{10} está com o sinal errado.</p>
+</div>
+</section>
+<section id="sa1b69_809" class="feedback js-hidden">
+<div id="taf69_815" class=" iDevice_content">
+<p>Correta. Parabéns!</p>
+</div>
+</section>
+<section id="sa2b69_809" class="feedback js-hidden">
+<div id="taf69_819" class=" iDevice_content">
+<p>Errada. Não inclui os termos particulares associados a e^x e \sin(x). Parece que você zerou a integral. Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa3b69_809" class="feedback js-hidden">
+<div id="taf69_822" class=" iDevice_content">
+<p>Errada. Não aparecem os termos envolvendo \sin(x) e \cos(x)). Parece que você esqueceu do sen(x) em Q(x) na hora de integrar.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-69_812">Errado</a><span> (<a href="#sa0b69_809">Feedback</a>)</span></li>
+<li><a href="#answer-69_815">Opção correta</a><span> (<a href="#sa1b69_809">Feedback</a>)</span></li>
+<li><a href="#answer-69_819">Errado</a><span> (<a href="#sa2b69_809">Feedback</a>)</span></li>
+<li><a href="#answer-69_822">Errado</a><span> (<a href="#sa3b69_809">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Sob licença</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição Compartilha Igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="separao_de_variveis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="exatas.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (Nova janela)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
