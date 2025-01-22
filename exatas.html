@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Exatas | Equações Diferenciais Ordinárias de Primeira Ordem </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Begoña Alarcón Cotillas" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site exe-auto-math" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar navegação</a></p>
+<header id="header" ><div id="headerContent">Equações Diferenciais Ordinárias de Primeira Ordem</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">EDO de primeira ordem</a></li>
+   <li><a href="interpretao_geomtrica.html" class="no-ch">Interpretação geométrica</a></li>
+   <li><a href="separao_de_variveis.html" class="no-ch">Separação de variáveis</a></li>
+   <li><a href="lineares.html" class="no-ch">Lineares</a></li>
+   <li id="active"><a href="exatas.html" class="active no-ch">Exatas</a></li>
+   <li><a href="redutvel_a_exatas.html" class="no-ch">Redutível a exatas</a></li>
+   <li><a href="geogebra_campo_de_direes.html" class="no-ch">Geogebra: Campo de direções</a></li>
+   <li><a href="exerccios.html" class="no-ch">Exercícios</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="lineares.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="redutvel_a_exatas.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Exatas</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_announcement" id="id55">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_announcement.png)"><span class="iDeviceTitle">&nbsp;</span></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta55_120_2" class="block iDevice_content">
+<div class="exe-text"><p>Nesta seção aprenderemos a resolver um tipo de EDO chamadas exatas. Aqui você tem que ter alguma noção básica de cálculo diferencial de funções de duas variáveis, ok? Fique ligado! </p>
+<p>Imagine que você está caminhando em uma trilha no meio de uma floresta. Em determinado ponto, você percebe que há várias placas com setas indicando diferentes caminhos. Algumas delas levam diretamente ao destino que você quer, enquanto outras dão voltas desnecessárias. Em matemática, resolver uma equação diferencial exata é como encontrar o caminho direto para o destino, evitando desvios.</p>
+<p><strong>Vamos entender por que?</strong></p>
+<p>As EDO exatas são aquelas da forma \( M(x,y)\, dx + N(x,y)\, dy=0\) que admitem uma função \(f(x,y)\) que seja constante ao longo das soluções \(y(x)\). Isto é, que </p>
+<p>\(f(x,y(x))=C.\)</p>
+<p>Essa função é chamada de <strong>potencial</strong>.</p>
+<p>Você já identificou essa última fórmula? Siiimmm, são <strong>curvas de nível</strong>!</p>
+<p>As curvas integrais de uma EDO exata descrevem o mapa de contorno do potencial \(f(x,y)\). Cada solução particular é uma curva de nível de \(f(x,y)\).</p>
+<figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="img1.png" alt="" width="300" />
+<figcaption class="figcaption"><span class="title"><em><span style="font-size: 10pt;">Mapa de contorno do potencial</span><br /></em></span></figcaption>
+</figure>
+<p>Como o potencial é constante ao logo das soluções, a diferencial total será zero. Isto é:</p>
+<p>\(df= \dfrac{\partial f}{\partial x}\, dx + \dfrac{\partial f}{\partial y}\, dy=0\)</p>
+<p>E é por isso que este tipo de EDO tem a forma </p>
+<p>\( M(x,y)\, dx + N(x,y)\, dy=0\)</p>
+<p>onde \(M(x,y)=\dfrac{\partial f}{\partial x}\) e \(N(x,y)=\dfrac{\partial f}{\partial y}.\)</p>
+<p>E temos <strong>mais informações</strong>!!</p>
+<p>O vetor gradiente de \(f\) é o campo vetorial associado. Observe que \(\nabla f = (M(x,y), N(x,y))\).</p>
+<p>E qual relação existe entre o vetor gradiente e as curvas de nível? Isso aí, <strong>o vetor gradiente</strong> no ponto \((a,b)\) <strong>é ortogonal à curva de nível</strong> no ponto \((a,b)\). </p>
+<figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="img0.1.png" alt="" width="300" height="240" />
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Curvas de nível do potencial \(f(x,y)\). Cada vetor é \(-\nabla f (a,b)\) (direção e sentido de máximo decrescimento).</em></span></figcaption>
+</figure>
+<p>E mais ainda... <strong>O vetor gradiente aponta na direção de maior crescimento do potencial</strong>. Portanto, indo na direção de \(-\nabla f\) acharemos a trilha (direção e sentido) por onde percorreremos a menor distância. Sacou? </p>
+<p>Resumindo, para resolver uma <a title="Atenção!!" class="exe-dialog-link" rel="lightbox" href="#t21e6d1f4-f575-76f8-ee61-4cb65ffe6d77" id="link21e6d1f4-f575-76f8-ee61-4cb65ffe6d77">EDO exata</a> \( M(x,y)\, dx + N(x,y)\, dy=0,\) buscaremos uma função de duas variáveis \(f(x,y)\). As soluções particulares da EDO serão curvas de nível, pelo que a solução geral gerará o mapa de contorno da função. Muito doido, né?</p>
+<div id="t21e6d1f4-f575-76f8-ee61-4cb65ffe6d77" class="exe-dialog-text js-hidden">
+<p>Nem todas as edo da forma \( M(x,y)\, dx + N(x,y)\, dy=0\) são exatas!!! Veremos uma condição que deve cumprir a EDO para ser exata daqui a pouco.</p>
+</div></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Qual seria a trilha mais curta para chegar na origem?" /></div><div class="feedback js-feedback js-hidden"><p>Observe que a trilha mais curta seria o semieixo OX positivo ou o semieixo OX negativo. </p>
+<p>Se você pegar qualquer outra trilha, acabará bem longe da origem!</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_backup_white" id="id59">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_backup_white.png)"><h1 class="iDeviceTitle">Exemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta59_120_2" class="block iDevice_content">
+<div class="exe-text"><p>Vamos tentar explicar como encontrar esse potencial da seguinte EDO exata e assim resolvê-la: </p>
+<p>\[<br />(2x + 3y) \, dx + (3x + 4y) \, dy = 0<br />\]</p>
+<p>Aqui, \(M(x, y) = 2x + 3y \) e \(N(x, y) = 3x + 4y.\)</p>
+<p>Sabemos que a solução geral da EDO é da forma \(f(x,y)=C\), onde<br />\(<br />\dfrac{\partial f}{\partial x} = M(x, y) = 2x + 3y<br />\)</p>
+<p>e </p>
+<p>\(<br />\dfrac{\partial f}{\partial y} = N(x, y) = 3x + 4y<br />\)</p>
+<p>Integrando \( M(x, y) \) em relação a \( x \), obtemos:<br />\(<br />f(x, y) = \displaystyle\int (2x + 3y) \, dx = x^2 + 3xy + g(y), \quad (1)<br />\)<br />onde \( g(y) \) é uma função dependente apenas de \( y \).</p>
+<p>Agora, usamos \( N(x, y) \) para determinar \( g(y) \). Sabemos que:<br />\(<br />\dfrac{\partial f}{\partial y} = N(x,y) \)</p>
+<p>Calculando \( \dfrac{\partial f}{\partial y} \) a partir da expressão \( f(x, y) \) em (1), temos:<br />\(<br />\dfrac{\partial f}{\partial y} = \dfrac{\partial}{\partial y}(x^2 + 3xy + g(y)) = 3x + g'(y).<br />\)</p>
+<p>Igualando a \( N(x, y) \), obtemos:<br />\(<br />3x + g'(y) = 3x + 4y.<br />\)</p>
+<p>Logo:<br />\(<br />g'(y) = 4y.<br />\)</p>
+<p>Integrando em relação a \( y \), temos:<br />\(<br />g(y) = 2y^2.<br />\)</p>
+<p>Substituindo o valor de \(g(y)\) na equação (1), obtemos a expressão da função potencial:<br />\(f(x, y) = x^2 + 3xy + 2y^2.\)</p>
+<p>E a solução geral da equação diferencial é dada por \(<br />f(x, y) = C,<br />\) ou seja:<br />\(<br />x^2 + 3xy + 2y^2 = C,<br />\)<br />onde \( C \) é uma constante arbitrária.</p>
+<figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="img0.2.png" alt="" width="300" height="201" />
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Campo de direções \(y'=\dfrac{-2x-3y}{3x+4y}\)</em></span></figcaption>
+</figure></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="E se começo integrando N(x,y)?" /></div><div class="feedback js-feedback js-hidden"><p>Devemos chegar à mesma solução. Vamos testar?</p>
+<p>Sabemos que a solução geral da EDO é da forma \(f(x,y)=C\), onde<br />\(<br />\dfrac{\partial f}{\partial x} = M(x, y) = 2x + 3y<br />\)</p>
+<p>e </p>
+<p></p>
+<p>\(<br />\dfrac{\partial f}{\partial y} = N(x, y) = 3x + 4y<br />\)</p>
+<p>Integrando \( N(x, y) \) em relação a \( y \), obtemos:<br />\(<br />f(x, y) = \displaystyle\int (3x + 4y) \, dy = 3xy+2y^2 +h(x), \quad (2)<br />\)<br />onde \( h(x) \) é uma função dependente apenas de \( x \).</p>
+<p>Agora, usamos \( M(x, y) \) para determinar \( h(x) \). Sabemos que:<br />\(<br />\dfrac{\partial f}{\partial x} = M(x,y) \)</p>
+<p>Calculando \( \dfrac{\partial f}{\partial x} \) a partir da expressão \( f(x, y) \) em (2), temos:<br />\(<br />\dfrac{\partial f}{\partial x} = \dfrac{\partial}{\partial x}(3xy+2y^2 + h(x)) = 3y+h'(x).<br />\)</p>
+<p><br />Igualando a \( M(x, y) \), obtemos:<br />\(<br />3y+h'(x) =  2x + 3y.<br />\)</p>
+<p>Logo:<br />\(<br />h'(x) = 2x.<br />\)</p>
+<p><br />Integrando em relação a \( x \), temos:<br />\(<br />h(x) = x^2.<br />\)</p>
+<p>Substituindo o valor de \(h(x)\) na equação (2), obtemos a expressão da função potencial:<br />\(f(x, y) = 3xy+2y^2+ x^2.\)</p>
+<p>E a solução geral da equação diferencial é dada por \(<br />f(x, y) = C,<br />\) ou seja:<br />\(<br />x^2 + 3xy + 2y^2 = C,<br />\)<br />onde \( C \) é uma constante arbitrária.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_assessment" id="id60">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assessment.png)"><h1 class="iDeviceTitle">Existência do potencial</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta60_121_2" class="block iDevice_content">
+<div class="exe-text"><p>No início da seção, falamos que as EDO exatas são as da forma \(M(x,y)\,dx\,+\,N(x,y)\,dy=0,\) que admitem um potencial.  Mas... como eu sei que esse tal de potencial existe ou não? Porque, como veremos, nem todas as EDO são exatas.</p>
+<p>Uma condição necessária para uma EDO da forma \(M(x,y)\,dx\,+\,N(x,y)\,dy=0,\) ser exata é que</p>
+<p>\(\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}.\)</p>
+<p>As soluções deste tipo de EDO são dadas implicitamente, da forma \(f(x,y)=C,\) onde \(f(x,y)\) é uma função de duas variáveis tal que </p>
+<p>\(\dfrac{\partial f}{\partial x}=M(x,y)\)  e \(\dfrac{\partial f}{\partial y}=N(x,y).\)</p>
+<p>Sendo assim, a função \(f(x,y)\) é o potencial. Sacou?</p>
+<div id="tbd1cd132-df53-b662-9214-e69dd3b007a0" class="exe-dialog-text js-hidden">
+<p></p>
+</div></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Por que essa condição?" /></div><div class="feedback js-feedback js-hidden"><p>Porque se a EDO admitir um potencial \(f\), ele deve ser bem comportado. O que significa? Que ele é no mínimo de classe \(C^2\) e verifica o Teorema de Schwarz.</p>
+<p>O Teorema de Schwarz garante que \(\dfrac{\partial^2 f}{\partial xy}=\dfrac{\partial^2 f}{\partial yx}. \) Portanto,</p>
+<p></p>
+<p>\(\dfrac{\partial M}{\partial y}=\dfrac{\partial^2 f}{\partial yx}\) e \(\dfrac{\partial N}{\partial x}=\dfrac{\partial^2 f}{\partial xy}\) devem ser iguais.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id70">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Teste sua leitura </h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-70_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion70_86" class="block question iDevice_content">
+<p><img src="1.PNG" alt="" width="40" height="40" />seguinte equação diferencial é exata? <br />\[<br />(3x + 2y) \, dx + (2x + y) \, dy = 0.<br />\]<br /><br /></p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Pista</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint70_86" class="block iDevice_content">
+<p>Identifique M e N e calcule \frac{\partial M}{\partial y}  e  \frac{\partial N}{\partial x}</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_89" class="sr-av"><a href="#answer-70_89">Opção 1</a></label><input type="radio" name="option70_86" id="i70_89" class="exe-radio-option exe-radio-option-0-4-70_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_89"><div id="taans70_89" class="block iDevice_content">
+<p>Sim, porque \( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_92" class="sr-av"><a href="#answer-70_92">Opção 2</a></label><input type="radio" name="option70_86" id="i70_92" class="exe-radio-option exe-radio-option-1-4-70_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_92"><div id="taans70_92" class="block iDevice_content">
+<p>Não, porque \( \frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_826" class="sr-av"><a href="#answer-70_826">Opção 3</a></label><input type="radio" name="option70_86" id="i70_826" class="exe-radio-option exe-radio-option-2-4-70_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_826"><div id="taans70_826" class="block iDevice_content">
+<p>Sim, porque \( M(x, y) \) e \( N(x, y) \) são lineares.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_829" class="sr-av"><a href="#answer-70_829">Opção 4</a></label><input type="radio" name="option70_86" id="i70_829" class="exe-radio-option exe-radio-option-3-4-70_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_829"><div id="taans70_829" class="block iDevice_content">
+<p>Não, porque a equação não está no formato correto.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b70_86" class="feedback js-hidden">
+<div id="taf70_89" class=" iDevice_content">
+<p>Boa! ( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} = 2\)</p>
+</div>
+</section>
+<section id="sa1b70_86" class="feedback js-hidden">
+<div id="taf70_92" class=" iDevice_content">
+<p>Ops! As parciais devem ser iguais. Tente de novo!</p>
+</div>
+</section>
+<section id="sa2b70_86" class="feedback js-hidden">
+<div id="taf70_826" class=" iDevice_content">
+<p>Ops! São lineares, sim, mas isso não garante que sejam exatas. Por exemplo, se M(x,y)=2x+3y. Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b70_86" class="feedback js-hidden">
+<div id="taf70_829" class=" iDevice_content">
+<p>Ops! Está na forma correta, agora deve verificar que as parciais são iguais. Tente de novo!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-70_89">Opção correta</a><span> (<a href="#sa0b70_86">Feedback</a>)</span></li>
+<li><a href="#answer-70_92">Errado</a><span> (<a href="#sa1b70_86">Feedback</a>)</span></li>
+<li><a href="#answer-70_826">Errado</a><span> (<a href="#sa2b70_86">Feedback</a>)</span></li>
+<li><a href="#answer-70_829">Errado</a><span> (<a href="#sa3b70_86">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-70_95" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion70_95" class="block question iDevice_content">
+<p><img src="2.PNG" alt="" width="40" height="40" /> A seguinte equação diferencial é exata? </p>
+<p>\[<br />x^2 \, dx + 2xy \, dy = 0.<br />\]</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Pista</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint70_95" class="block iDevice_content">
+<p>Identifique M e N e calcule \frac{\partial M}{\partial y}  e  \frac{\partial N}{\partial x}</p>
+<p> </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_98" class="sr-av"><a href="#answer-70_98">Opção 1</a></label><input type="radio" name="option70_95" id="i70_98" class="exe-radio-option exe-radio-option-0-4-70_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_98"><div id="taans70_98" class="block iDevice_content">
+<p>Sim, porque \( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_101" class="sr-av"><a href="#answer-70_101">Opção 2</a></label><input type="radio" name="option70_95" id="i70_101" class="exe-radio-option exe-radio-option-1-4-70_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_101"><div id="taans70_101" class="block iDevice_content">
+<p>Não, porque \( \frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_834" class="sr-av"><a href="#answer-70_834">Opção 3</a></label><input type="radio" name="option70_95" id="i70_834" class="exe-radio-option exe-radio-option-2-4-70_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_834"><div id="taans70_834" class="block iDevice_content">
+<p>Sim, porque é uma equação homogênea.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_837" class="sr-av"><a href="#answer-70_837">Opção 4</a></label><input type="radio" name="option70_95" id="i70_837" class="exe-radio-option exe-radio-option-3-4-70_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_837"><div id="taans70_837" class="block iDevice_content">
+<p>Não, porque a equação não está no formato correto.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b70_95" class="feedback js-hidden">
+<div id="taf70_98" class=" iDevice_content">
+<p>Ops! As parciais devem ser iguais. Tente de novo!</p>
+</div>
+</section>
+<section id="sa1b70_95" class="feedback js-hidden">
+<div id="taf70_101" class=" iDevice_content">
+<p>Boa! ( \frac{\partial M}{\partial y} = 0\) e \(\frac{\partial N}{\partial x} = 2y,\) são diferentes.</p>
+</div>
+</section>
+<section id="sa2b70_95" class="feedback js-hidden">
+<div id="taf70_834" class=" iDevice_content">
+<p>Ops! É homogênea, sim, mas isso não garante que sejam exatas. Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b70_95" class="feedback js-hidden">
+<div id="taf70_837" class=" iDevice_content">
+<p>Ops! Está na forma correta, agora deve verificar que as parciais são iguais. Tente de novo!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-70_98">Errado</a><span> (<a href="#sa0b70_95">Feedback</a>)</span></li>
+<li><a href="#answer-70_101">Opção correta</a><span> (<a href="#sa1b70_95">Feedback</a>)</span></li>
+<li><a href="#answer-70_834">Errado</a><span> (<a href="#sa2b70_95">Feedback</a>)</span></li>
+<li><a href="#answer-70_837">Errado</a><span> (<a href="#sa3b70_95">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-70_840" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion70_840" class="block question iDevice_content">
+<p> <img src="3.PNG" width="40" height="40" /> A seguinte equação diferencial é exata? </p>
+<p>\[<br />y'=\dfrac{4x^3 + 3y^2}{6xy}.<br />\]</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Pista</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint70_840" class="block iDevice_content">
+<p>Identifique M e N e calcule \frac{\partial M}{\partial y}  e  \frac{\partial N}{\partial x}</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_843" class="sr-av"><a href="#answer-70_843">Opção 1</a></label><input type="radio" name="option70_840" id="i70_843" class="exe-radio-option exe-radio-option-0-4-70_840-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_843"><div id="taans70_843" class="block iDevice_content">
+<p>Sim, porque \( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_846" class="sr-av"><a href="#answer-70_846">Opção 2</a></label><input type="radio" name="option70_840" id="i70_846" class="exe-radio-option exe-radio-option-1-4-70_840-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_846"><div id="taans70_846" class="block iDevice_content">
+<p>Não, porque \( \frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_849" class="sr-av"><a href="#answer-70_849">Opção 3</a></label><input type="radio" name="option70_840" id="i70_849" class="exe-radio-option exe-radio-option-2-4-70_840-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_849"><div id="taans70_849" class="block iDevice_content">
+<p>Sim, porque \( M(x, y) \) e \( N(x, y) \) são polinomiais.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_852" class="sr-av"><a href="#answer-70_852">Opção 4</a></label><input type="radio" name="option70_840" id="i70_852" class="exe-radio-option exe-radio-option-3-4-70_840-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_852"><div id="taans70_852" class="block iDevice_content">
+<p>Não, porque a equação não está no formato correto.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b70_840" class="feedback js-hidden">
+<div id="taf70_843" class=" iDevice_content">
+<p>Boa! ( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} = 6y\)</p>
+</div>
+</section>
+<section id="sa1b70_840" class="feedback js-hidden">
+<div id="taf70_846" class=" iDevice_content">
+<p>Ops! As parciais devem ser iguais. Tente de novo!</p>
+</div>
+</section>
+<section id="sa2b70_840" class="feedback js-hidden">
+<div id="taf70_849" class=" iDevice_content">
+<p>Ops! São polinomiais, sim, mas isso não garante que sejam exatas. Por exemplo, se M(x,y)=4x^3+2y^2. Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b70_840" class="feedback js-hidden">
+<div id="taf70_852" class=" iDevice_content">
+<p>Ops! Não está na forma padrão, mas isso não interfere transformar ela na forma padrão e identificar quem é M e N. Tente de novo!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-70_843">Opção correta</a><span> (<a href="#sa0b70_840">Feedback</a>)</span></li>
+<li><a href="#answer-70_846">Errado</a><span> (<a href="#sa1b70_840">Feedback</a>)</span></li>
+<li><a href="#answer-70_849">Errado</a><span> (<a href="#sa2b70_840">Feedback</a>)</span></li>
+<li><a href="#answer-70_852">Errado</a><span> (<a href="#sa3b70_840">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-70_856" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion70_856" class="block question iDevice_content">
+<p><img src="C__Users_avela_OneDrive_Desktop_Monitoria_4.PNG" alt="" width="40" height="40" />A seguinte equação diferencial é exata? <br />\[<br />(e^x + y^2) \, dx + (2xy + e^y) \, dy = 0.<br />\]</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Pista</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint70_856" class="block iDevice_content">
+<p>Identifique M e N e calcule \frac{\partial M}{\partial y}  e  \frac{\partial N}{\partial x}</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_859" class="sr-av"><a href="#answer-70_859">Opção 1</a></label><input type="radio" name="option70_856" id="i70_859" class="exe-radio-option exe-radio-option-0-4-70_856-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_859"><div id="taans70_859" class="block iDevice_content">
+<p>Não, porque a equação não está no formato correto. </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_862" class="sr-av"><a href="#answer-70_862">Opção 2</a></label><input type="radio" name="option70_856" id="i70_862" class="exe-radio-option exe-radio-option-1-4-70_856-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_862"><div id="taans70_862" class="block iDevice_content">
+<p>Não, porque \( M(x, y) \) e \( N(x, y) \) não são polinomiais.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_865" class="sr-av"><a href="#answer-70_865">Opção 3</a></label><input type="radio" name="option70_856" id="i70_865" class="exe-radio-option exe-radio-option-2-4-70_856-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_865"><div id="taans70_865" class="block iDevice_content">
+<p>Não, porque \( \frac{\partial M}{\partial y} \neq \frac{\partial N}{\partial x} \)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i70_869" class="sr-av"><a href="#answer-70_869">Opção 4</a></label><input type="radio" name="option70_856" id="i70_869" class="exe-radio-option exe-radio-option-3-4-70_856-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-70_869"><div id="taans70_869" class="block iDevice_content">
+<p>Sim, porque \( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \).</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b70_856" class="feedback js-hidden">
+<div id="taf70_859" class=" iDevice_content">
+<p>Ops! Está na forma correta, agora deve verificar que as parciais são iguais. Tente de novo!</p>
+</div>
+</section>
+<section id="sa1b70_856" class="feedback js-hidden">
+<div id="taf70_862" class=" iDevice_content">
+<p>Ops! Não polinomiais, não, mas isso não impede que sejam exatas. Tente de novo!</p>
+</div>
+</section>
+<section id="sa2b70_856" class="feedback js-hidden">
+<div id="taf70_865" class=" iDevice_content">
+<p>Ops! As parciais devem ser iguais. Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b70_856" class="feedback js-hidden">
+<div id="taf70_869" class=" iDevice_content">
+<p>Boa! ( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} = 2y\)</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-70_859">Errado</a><span> (<a href="#sa0b70_856">Feedback</a>)</span></li>
+<li><a href="#answer-70_862">Errado</a><span> (<a href="#sa1b70_856">Feedback</a>)</span></li>
+<li><a href="#answer-70_865">Errado</a><span> (<a href="#sa2b70_856">Feedback</a>)</span></li>
+<li><a href="#answer-70_869">Opção correta</a><span> (<a href="#sa3b70_856">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_assignment" id="id56">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment.png)"><h1 class="iDeviceTitle">MÉTODO DAS EDO EXATAS</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta56_121_2" class="block iDevice_content">
+<div class="exe-text"><p>Agora que sabemos quando uma EDO é exata e quando não, resta aprender o método para resolvê-las. Igualzinho a como fizemos com o exemplo \(<br />(2x + 3y) \, dx + (3x + 4y) \, dy = 0\)</p>
+<p>Consideremos a EDO \[<br />M(x,y) \, dx + N(x,y) \, dy = 0<br />\]</p>
+<p>Se \(\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}\), então a EDO admite uma função potencial \(f(x,y)\) e a solução geral da EDO é \(f(x,y)=C,\) onde \(C\) é uma constante arbitrária.</p>
+<p>Para calcular \(f(x,y)\) integraremos a função \(M(x,y)\) em relação a \(x\):</p>
+<p>\(f(x,y)=\displaystyle\int M(x,y) \, dx\, + g(y),\)</p>
+<p>onde \(g(y)\) é uma função que depende unicamente de \(y\). </p>
+<p>Uma vez que temos a expressão de \(f(x,y)\), derivamos em relação a \(y\) e <a title="Por que?" class="exe-dialog-link" rel="lightbox" href="#tcae1b565-cea5-2757-47a8-618b6985b5ae" id="linkcae1b565-cea5-2757-47a8-618b6985b5ae">igualamos</a> a \(N(x,y)\) para <a title="De onde sai essa g(y)?" class="exe-dialog-link" rel="lightbox" href="#te73d3c06-0891-d57f-d73a-c5b3d381a613" id="linke73d3c06-0891-d57f-d73a-c5b3d381a613">encontrar</a> a \(g(y)\).</p>
+<p>\(N(x,y)=\dfrac{\partial f}{\partial y}=\dfrac{\partial}{\partial y}\left(\displaystyle\int M(x,y) \, dx\right)+ g'(y)\)</p>
+<p>Na equação anterior, <a title="Detalhe!!" class="exe-dialog-link" rel="lightbox" href="#t0ee9eea9-0a3f-7750-284f-1221d008c66f" id="link0ee9eea9-0a3f-7750-284f-1221d008c66f">isole</a> \(g'(y)\) </p>
+<p>\(g'(y)=N(x,y)-\dfrac{\partial}{\partial y}\left(\displaystyle\int M(x,y) \, dx\right) \)</p>
+<p>e depois integre em relação a \(y\):</p>
+<p>\(g(y)=\displaystyle\int \left(N(x,y)-\dfrac{\partial}{\partial y}\left(\displaystyle\int M(x,y) \, dx\right)\right)\,dy \)</p>
+<p>Finalmente, adicione o valor de \(g(y)\) na expressão </p>
+<p>\(f(x,y)=\displaystyle\int M(x,y) \, dx\, + g(y).\)</p>
+<p>A solução geral da EDO é \(f(x,y)=C\)</p>
+<p class="js-required"><input type="button" value="Podemos começar integrando N(x,y)!" onclick="$('#intN').toggle()" /></p>
+<div id="intN" class="js-hidden">
+<p>Agora calcularemos \(f(x,y)\) integrando a função \(N(x,y)\) em relação a \(y\):</p>
+<p>\(f(x,y)=\displaystyle\int N(x,y) \, dy\, + h(x),\)</p>
+<p>onde \(h(x)\) é uma função que depende unicamente de \(x\). </p>
+<p>Uma vez que temos a expressão de \(f(x,y)\), derivamos em relação a \(x\) e igualamos a \(M(x,y)\) para encontrar a \(h(x)\).</p>
+<p>\(M(x,y)=\dfrac{\partial f}{\partial x}=\dfrac{\partial}{\partial x}\left(\displaystyle\int N(x,y) \, dy\right)+ h'(x)\)</p>
+<p>Na equação anterior, isole \(h'(x)\) </p>
+<p>\(h'(y)=M(x,y)-\dfrac{\partial}{\partial x}\left(\displaystyle\int N(x,y) \, dy\right) \)</p>
+<p>e depois integre em relação a \(x\):</p>
+<p>\(h(x)=\displaystyle\int \left(M(x,y)-\dfrac{\partial}{\partial x}\left(\displaystyle\int N(x,y) \, dy\right)\right)\,dx \)</p>
+<p>Finalmente, adicione o valor de \(h(x)\) na expressão </p>
+<p>\(f(x,y)=\displaystyle\int N(x,y) \, dy\, + h(x).\)</p>
+<p>A solução geral da EDO é \(f(x,y)=C.\)</p>
+<p>O potencial \(f(x,y)\) deve ser o mesmo, tanto se começarmos por integrar \(M(x,y)\) quanto se começar integrando \(N(x,y)\). A escolha depende de se for mais simples para você integrar \(M(x,y)\) ou \(N(x,y).\)</p>
+</div>
+<p><strong>Resumindo:</strong> O método para resolver EDO exatas é uma técnica para resolver EDOs de primeira ordem quando admitem uma função potencial. Os passos são:</p>
+<p>1. Reorganizar a equação para colocar ela na forma padrão para dentificar \(M(x,y)\) e \(N(x,y).\)<br />2. Verificar que a EDO é de fato exata: \(\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}.\)<br />3. Determinar a função potencial \(f(x,y)\) integrando \(M(x,y)\) em relação a \(x\) (ou, equivalentemente \(N(x,y)\) em relação a \(y\)).<br />4. Usar a condição inicial, se disponível, para encontrar a solução particular.<br />5. Determinar \(g(y)\) usando \(N(x,y)\) (ou, equivalentemente \(h(x)\) usando \(M(x,y)\)).<br />5. Escrever a solução geral \(f(x,y)=C\), onde \(C\) é uma constante arbitrária.</p>
+<p>A continuação propomos alguns exercícios para você treinar. Força!!</p>
+<div id="tcae1b565-cea5-2757-47a8-618b6985b5ae" class="exe-dialog-text js-hidden">
+<p>Isso é possível porque \(\dfrac{\partial f}{\partial y}=N(x,y)\) já que a EDO é exata.</p>
+</div>
+<div id="t0ee9eea9-0a3f-7750-284f-1221d008c66f" class="exe-dialog-text js-hidden">
+<p>\(g(y)\) somente depende de \(y\), portanto você deve poder cortar todo o que tiver \(x\) da equação. Se não conseguir, alguma coisa estará errada!</p>
+</div>
+<div id="te73d3c06-0891-d57f-d73a-c5b3d381a613" class="exe-dialog-text js-hidden">
+<p>As primitivas de uma função de uma variável diferem em uma constante. Isto é, todas são da forma \(F(x)=\int f(x) dx + K\). Isso porque, ao derivar \(F(x)\) em relação a \(x\), fica somente \(f(x)\), pois a derivada de uma constante é zero.<br />Já quando você integra uma função de duas variáveis \(f(x,y)\) em relação \(x\), essa constante \(K\) agora vira uma função da outra variável \(y\). Isto é, \(F(x,y)=\int f(x,y)\,dx + g(y)\). Isso porque, ao derivar \(F(x,y)\) em relação a \(x\), fica somente \(f(x,y)\), pois a derivada de \(g(y)\) em relação a \(x\) é zero.<br />Analogamente, se integramos \(f(x,y)\) em relação \(y\), essa constante \(K\) agora vira uma função da outra variável \(x\). Isto é, \(F(x,y)=\int f(x,y)\,dy + h(x)\). Isso porque, ao derivar \(F(x,y)\) em relação a \(y\), fica somente \(f(x,y)\), pois a derivada de \(h(x)\) em relação a \(y\) é zero.</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id72">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Teste sua leitura</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-72_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion72_86" class="block question iDevice_content">
+<p><img src="1.PNG" alt="" width="40" height="40" />A seguinte equação diferencial é exata? Se sim, qual é a solução geral?</p>
+<p>\[<br />(2x + y) \, dx + (x + y) \, dy = 0.<br />\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_89" class="sr-av"><a href="#answer-72_89">Opção 1</a></label><input type="radio" name="option72_86" id="i72_89" class="exe-radio-option exe-radio-option-0-4-72_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_89"><div id="taans72_89" class="block iDevice_content">
+<p>Sim, e a solução é \( x^2 + 2xy + y^2 = C \)</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_92" class="sr-av"><a href="#answer-72_92">Opção 2</a></label><input type="radio" name="option72_86" id="i72_92" class="exe-radio-option exe-radio-option-1-4-72_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_92"><div id="taans72_92" class="block iDevice_content">
+<p>Sim, e a solução é \( 2x^2 + 2xy + y^2 = C \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_873" class="sr-av"><a href="#answer-72_873">Opção 3</a></label><input type="radio" name="option72_86" id="i72_873" class="exe-radio-option exe-radio-option-2-4-72_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_873"><div id="taans72_873" class="block iDevice_content">
+<p>Não, a equação não é exata.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_876" class="sr-av"><a href="#answer-72_876">Opção 4</a></label><input type="radio" name="option72_86" id="i72_876" class="exe-radio-option exe-radio-option-3-4-72_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_876"><div id="taans72_876" class="block iDevice_content">
+<p>Sim, mas a solução geral não pode ser determinada. </p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b72_86" class="feedback js-hidden">
+<div id="taf72_89" class=" iDevice_content">
+<p>Ops! Acho que você se enganou na hora de simplificar a solução geral. Tente de novo!</p>
+</div>
+</section>
+<section id="sa1b72_86" class="feedback js-hidden">
+<div id="taf72_92" class=" iDevice_content">
+<p>Muito bom!</p>
+</div>
+</section>
+<section id="sa2b72_86" class="feedback js-hidden">
+<div id="taf72_873" class=" iDevice_content">
+<p>Ops! A EDO é exata, sim! Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b72_86" class="feedback js-hidden">
+<div id="taf72_876" class=" iDevice_content">
+<p>Ops! Pode ser determinada, sim! Tente de novo!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-72_89">Errado</a><span> (<a href="#sa0b72_86">Feedback</a>)</span></li>
+<li><a href="#answer-72_92">Opção correta</a><span> (<a href="#sa1b72_86">Feedback</a>)</span></li>
+<li><a href="#answer-72_873">Errado</a><span> (<a href="#sa2b72_86">Feedback</a>)</span></li>
+<li><a href="#answer-72_876">Errado</a><span> (<a href="#sa3b72_86">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-72_95" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion72_95" class="block question iDevice_content">
+<p><img src="2.PNG" alt="" width="40" height="40" />A equação seguinte equação diferencial é exata? Se sim, qual é a solução geral?</p>
+<p>\[<br />y'=\dfrac{2y-x}{3x^2 +y}.<br />\]</p>
+<p> </p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_98" class="sr-av"><a href="#answer-72_98">Opção 1</a></label><input type="radio" name="option72_95" id="i72_98" class="exe-radio-option exe-radio-option-0-4-72_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_98"><div id="taans72_98" class="block iDevice_content">
+<p>Sim, e a solução é \( x^2 + xy + \frac{y^2}{2} = C \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_101" class="sr-av"><a href="#answer-72_101">Opção 2</a></label><input type="radio" name="option72_95" id="i72_101" class="exe-radio-option exe-radio-option-1-4-72_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_101"><div id="taans72_101" class="block iDevice_content">
+<p>Sim, e a solução é \( x^2 + 2xy + y^2 = C \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_880" class="sr-av"><a href="#answer-72_880">Opção 3</a></label><input type="radio" name="option72_95" id="i72_880" class="exe-radio-option exe-radio-option-2-4-72_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_880"><div id="taans72_880" class="block iDevice_content">
+<p>Sim, e a solução é \( 2x^2 + xy + y^2 = C \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_883" class="sr-av"><a href="#answer-72_883">Opção 4</a></label><input type="radio" name="option72_95" id="i72_883" class="exe-radio-option exe-radio-option-3-4-72_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_883"><div id="taans72_883" class="block iDevice_content">
+<p>Não, a equação não é exata.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b72_95" class="feedback js-hidden">
+<div id="taf72_98" class=" iDevice_content">
+<p>Ops! Acho que se enganou em calcular as parciais de \(M\) e \(N\). Tente de novo!</p>
+</div>
+</section>
+<section id="sa1b72_95" class="feedback js-hidden">
+<div id="taf72_101" class=" iDevice_content">
+<p>Ops! Acho que se enganou em calcular as parciais de \(M\) e \(N\). Tente de novo!</p>
+</div>
+</section>
+<section id="sa2b72_95" class="feedback js-hidden">
+<div id="taf72_880" class=" iDevice_content">
+<p>Ops! Acho que se enganou em calcular as parciais de \(M\) e \(N\). Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b72_95" class="feedback js-hidden">
+<div id="taf72_883" class=" iDevice_content">
+<p>Muito bom!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-72_98">Errado</a><span> (<a href="#sa0b72_95">Feedback</a>)</span></li>
+<li><a href="#answer-72_101">Errado</a><span> (<a href="#sa1b72_95">Feedback</a>)</span></li>
+<li><a href="#answer-72_880">Errado</a><span> (<a href="#sa2b72_95">Feedback</a>)</span></li>
+<li><a href="#answer-72_883">Opção correta</a><span> (<a href="#sa3b72_95">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-72_886" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion72_886" class="block question iDevice_content">
+<p><img src="3.PNG" alt="" width="40" height="40" />Qual é a solução do seguinte problema de valor inicial?</p>
+<p>\[<br />(x^2 + y) \, dx + (y^2 + x) \, dy = 0, \; y(1) = 2.<br />\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_889" class="sr-av"><a href="#answer-72_889">Opção 1</a></label><input type="radio" name="option72_886" id="i72_889" class="exe-radio-option exe-radio-option-0-4-72_886-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_889"><div id="taans72_889" class="block iDevice_content">
+<p>\( x^3+3xy + y^3 = 11 \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_892" class="sr-av"><a href="#answer-72_892">Opção 2</a></label><input type="radio" name="option72_886" id="i72_892" class="exe-radio-option exe-radio-option-1-4-72_886-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_892"><div id="taans72_892" class="block iDevice_content">
+<p>\( xy + \frac{y^3}{3} + \frac{x^3}{3} = \frac{17}{3} \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_895" class="sr-av"><a href="#answer-72_895">Opção 3</a></label><input type="radio" name="option72_886" id="i72_895" class="exe-radio-option exe-radio-option-2-4-72_886-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_895"><div id="taans72_895" class="block iDevice_content">
+<p>\( xy + 2y + \frac{x^3}{3} = C \). </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_898" class="sr-av"><a href="#answer-72_898">Opção 4</a></label><input type="radio" name="option72_886" id="i72_898" class="exe-radio-option exe-radio-option-3-4-72_886-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_898"><div id="taans72_898" class="block iDevice_content">
+<p>\( xy + \frac{y^3}{3} + \frac{x^4}{3} = \frac{11}{3} \).</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b72_886" class="feedback js-hidden">
+<div id="taf72_889" class=" iDevice_content">
+<p>Muito bom!</p>
+</div>
+</section>
+<section id="sa1b72_886" class="feedback js-hidden">
+<div id="taf72_892" class=" iDevice_content">
+<p>Ops! Você se enganou no cálculo de \(C\). Tente de novo!</p>
+</div>
+</section>
+<section id="sa2b72_886" class="feedback js-hidden">
+<div id="taf72_895" class=" iDevice_content">
+<p>Ops! Você se enganou no cálculo de \(g(y)\). Para calcular a constante \(C\), deve substituir \(y(1) = 2\) na solução geral. Tente de novo!</p>
+</div>
+</section>
+<section id="sa3b72_886" class="feedback js-hidden">
+<div id="taf72_898" class=" iDevice_content">
+<p>Ops! Você se enganou integrando \(M(x,y)\). Tente de novo!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-72_889">Opção correta</a><span> (<a href="#sa0b72_886">Feedback</a>)</span></li>
+<li><a href="#answer-72_892">Errado</a><span> (<a href="#sa1b72_886">Feedback</a>)</span></li>
+<li><a href="#answer-72_895">Errado</a><span> (<a href="#sa2b72_886">Feedback</a>)</span></li>
+<li><a href="#answer-72_898">Errado</a><span> (<a href="#sa3b72_886">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-72_901" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion72_901" class="block question iDevice_content">
+<p><img src="C__Users_avela_OneDrive_Desktop_Monitoria_4.PNG" alt="" width="40" height="40" />Considere a equação diferencial exata:<br />\[<br />(e^x + y^2) \, dx + (2xy + e^y) \, dy = 0.<br />\]<br />Sabendo que \( y(1) = 1 \), qual é a solução particular?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_904" class="sr-av"><a href="#answer-72_904">Opção 1</a></label><input type="radio" name="option72_901" id="i72_904" class="exe-radio-option exe-radio-option-0-4-72_901-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_904"><div id="taans72_904" class="block iDevice_content">
+<p>\( e^x + xy^2 + e^y = C \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_907" class="sr-av"><a href="#answer-72_907">Opção 2</a></label><input type="radio" name="option72_901" id="i72_907" class="exe-radio-option exe-radio-option-1-4-72_901-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_907"><div id="taans72_907" class="block iDevice_content">
+<p>\( e^x + xy^2 + e^y = e+2 \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_911" class="sr-av"><a href="#answer-72_911">Opção 3</a></label><input type="radio" name="option72_901" id="i72_911" class="exe-radio-option exe-radio-option-2-4-72_901-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_911"><div id="taans72_911" class="block iDevice_content">
+<p>\( e^x + xy^2 + e^y = 2e+1 \).</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i72_914" class="sr-av"><a href="#answer-72_914">Opção 4</a></label><input type="radio" name="option72_901" id="i72_914" class="exe-radio-option exe-radio-option-3-4-72_901-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-72_914"><div id="taans72_914" class="block iDevice_content">
+<p>\( e^x +2 xy^2 + e^y = 2e \).</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b72_901" class="feedback js-hidden">
+<div id="taf72_904" class=" iDevice_content">
+<p>Ops! Essa é a solução geral. O problema pede uma particular. Tente de novo!</p>
+</div>
+</section>
+<section id="sa1b72_901" class="feedback js-hidden">
+<div id="taf72_907" class=" iDevice_content">
+<p>Ops! Se enganou no cálculo de \(C\). Tente de novo!</p>
+</div>
+</section>
+<section id="sa2b72_901" class="feedback js-hidden">
+<div id="taf72_911" class=" iDevice_content">
+<p>Muito bom!</p>
+</div>
+</section>
+<section id="sa3b72_901" class="feedback js-hidden">
+<div id="taf72_914" class=" iDevice_content">
+<p>Ops! Se enganou na solução geral. Tente de novo!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-72_904">Errado</a><span> (<a href="#sa0b72_901">Feedback</a>)</span></li>
+<li><a href="#answer-72_907">Errado</a><span> (<a href="#sa1b72_901">Feedback</a>)</span></li>
+<li><a href="#answer-72_911">Opção correta</a><span> (<a href="#sa2b72_901">Feedback</a>)</span></li>
+<li><a href="#answer-72_914">Errado</a><span> (<a href="#sa3b72_901">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Sob licença</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição Compartilha Igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="lineares.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="redutvel_a_exatas.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (Nova janela)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
