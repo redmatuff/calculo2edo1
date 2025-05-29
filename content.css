@@ -84,98 +84,26 @@ li{list-style-position:outside}
 	#packageLicense.cc{padding-left:0;text-align:center}
 	.toggle-idevice{display:none}
 }
-/* eXeLearning Style Designer */
-.iDevice_header{
-/*emTitleColor*/
-color:#ffffff;
-/*emTitleBGColor*/
-background-color:#3baeca;border-color:#3baeca;
-}
-.iDevice_inner{
-/*emColor*/
-color:#15157c;border-color:/*emBorderColor*/
-#3baeca;
-}
-.iDevice_header .toggle-idevice a{
-/*emIconColor*/
-background-image:url(_style_icons_white.png);
-}
-.iDeviceTitle{
-background-image:url(icon_star_white.png);
-}
-.activityIdevice .iDeviceTitle{
-background-image:url(icon_assignment_white.png);
-}
-.readingIdevice .iDeviceTitle{
-background-image:url(icon_unread_white.png);
-}
-.FileAttachIdeviceInc .iDeviceTitle{
-background-image:url(icon_download_white.png);
-}
-.WikipediaIdevice .iDeviceTitle{
-background-image:url(icon_description_white.png);
-}
-.ListaIdevice .iDeviceTitle,.QuizTestIdevice .iDeviceTitle,.MultichoiceIdevice .iDeviceTitle,.TrueFalseIdevice .iDeviceTitle,.MultiSelectIdevice .iDeviceTitle,.ClozeIdevice .iDeviceTitle{
-background-image:url(icon_question_white.png);
-}
-.preknowledgeIdevice .iDeviceTitle{
-background-image:url(icon_announcement_white.png);
-}
-.GalleryIdevice .iDeviceTitle{
-background-image:url(icon_media_white.png);
-}
-.objectivesIdevice .iDeviceTitle{
-background-image:url(icon_info_white.png);
-}
-.ReflectionIdevice .iDeviceTitle{
-background-image:url(icon_account_white.png);
-}
-.toggle-em0 a{
-/*noEmIconColor*/
-background-image:url(_style_icons_black.png);
-}
-body{
-/*fontFamily*/
-font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-/*bodyColor*/
-color:#15157c;
-/*fontSize*/
-font-size:120%;
-/*contentBGColor*/
-background-color:#ffffff;
-}
-a{
-/*aColor*/
-color:#ff0000;
-}
-#header,#emptyHeader,#nodeDecoration{
-height:auto!important;
-/*headerHeight*/
-height:150px;min-height:150px;
-/*headerBGColor*/
-background-color:#ffffff;
-/*headerBGURL*/
-background-image:url(cabecalhoREDMAT.png);
-/*headerBGRepeat*/
-background-repeat:repeat-x;
-/*headerBGPosition*/
-background-position:0 0;border:1px solid /*headerBorderColor*/
-#ffffff;
-}
-#headerContent{
-/*hideProjectTitle*/
-position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);
-}
-#siteFooter{
-border:1px solid /*footerBorderColor*/
-#3baeca;
-/*footerColor*/
-color:#21217c;
-/*footerTextAlign*/
-text-align:center;
-/*footerBGColor*/
-background-color:#3baeca;
-}
+/* eXeLearning Style Designer */.iDevice_header{/*emTitleColor*/color:#ffffff;/*emTitleBGColor*/background-color:#336d98;border-color:#3baeca;}
+.iDevice_inner{/*emColor*/color:#15157c;border-color:/*emBorderColor*/#3baeca;}
+.iDevice_header .toggle-idevice a{/*emIconColor*/background-image:url(_style_icons_white.png);}
+.iDeviceTitle{background-image:url(icon_star_white.png);}
+.activityIdevice .iDeviceTitle{background-image:url(icon_assignment_white.png);}
+.readingIdevice .iDeviceTitle{background-image:url(icon_unread_white.png);}
+.FileAttachIdeviceInc .iDeviceTitle{background-image:url(icon_download_white.png);}
+.WikipediaIdevice .iDeviceTitle{background-image:url(icon_description_white.png);}
+.ListaIdevice .iDeviceTitle,.QuizTestIdevice .iDeviceTitle,.MultichoiceIdevice .iDeviceTitle,.TrueFalseIdevice .iDeviceTitle,.MultiSelectIdevice .iDeviceTitle,.ClozeIdevice .iDeviceTitle{background-image:url(icon_question_white.png);}
+.preknowledgeIdevice .iDeviceTitle{background-image:url(icon_announcement_white.png);}
+.GalleryIdevice .iDeviceTitle{background-image:url(icon_media_white.png);}
+.objectivesIdevice .iDeviceTitle{background-image:url(icon_info_white.png);}
+.ReflectionIdevice .iDeviceTitle{background-image:url(icon_account_white.png);}
+.toggle-em0 a{/*noEmIconColor*/background-image:url(_style_icons_black.png);}
+body{/*fontFamily*/font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;/*bodyColor*/color:#15157c;/*fontSize*/font-size:120%;/*contentBGColor*/background-color:#ffffff;}
+a{/*aColor*/color:#ff0000;}
+#header,#emptyHeader,#nodeDecoration{height:auto!important;/*headerHeight*/height:100px;min-height:100px;/*headerBGColor*/background-color:#336d98;/*headerBGURL*/background-image:url(logoredmatpequeno.png);/*headerBGRepeat*/background-repeat:no-repeat;/*headerBGPosition*/background-position:0 0;border:1px solid /*headerBorderColor*/#dddddd;}
+#headerContent{/*headerTitleTopMargin*/padding-top:20px;/*headerTitleColor*/color:#ffffff;/*headerTitleTextShadowColor*/text-shadow:1px 1px 1px #dddddd;/*headerTitleAlign*/text-align:center;/*headerTitleFontSize*/font-size:150%;}
+#siteFooter{border:1px solid /*footerBorderColor*/#dddddd;/*footerColor*/color:#ffffff;/*footerTextAlign*/text-align:center;/*footerBGColor*/background-color:#336d98;}
+#siteFooter a{/*footerAColor*/color:#ffffff;}
 /* eXeLearning Style Designer (custom CSS) */
 .iDeviceTitle {
 background-size: 50px 50px;
