@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>O que é uma EDO de primeira ordem? | EDO de Primeira Ordem </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Begoña Alarcón Cotillas" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="geogebra-activity.css" />
+<script type="text/javascript" src="geogebra-activity.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site exe-auto-math" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar navegação</a></p>
+<header id="header" ><div id="headerContent">EDO de Primeira Ordem</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Instruções</a></li>
+   <li id="active"><a href="o_que__uma_edo_de_primeira_ordem.html" class="active no-ch">O que é uma EDO de primeira ordem?</a></li>
+   <li><a href="separao_de_variveis.html" class="no-ch">Separação de variáveis</a></li>
+   <li><a href="lineares.html" class="no-ch">Lineares</a></li>
+   <li><a href="exatas.html" class="daddy">Exatas</a>
+   <ul class="other-section">
+      <li><a href="mtodo_para_resolver_edo_exatas.html" class="no-ch">Método para resolver EDO exatas</a></li>
+      <li><a href="redutveis_a_exata.html" class="no-ch">Redutíveis a exata</a></li>
+   </ul>
+   </li>
+   <li><a href="geogebra.html" class="no-ch">Geogebra</a></li>
+   <li><a href="exerccios.html" class="no-ch">Exercícios</a></li>
+   <li><a href="avalie_o_recurso.html" class="no-ch">Avalie o recurso!</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="separao_de_variveis.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">O que é uma EDO de primeira ordem?</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_announcement_white" id="id42">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_announcement_white.png)"><span class="iDeviceTitle">&nbsp;</span></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_120_2" class="block iDevice_content">
+<div class="exe-text"><p>A seguir, apresentaremos um exemplo para ilustrar quais informações cada elemento de uma EDO de primeira ordem pode fornecer. Muitas vezes, é possível identificar diversas propriedades das soluções apenas observando a forma da equação, sem a necessidade de resolvê-la explicitamente.</p>
+<figure class="exe-figure exe-image" style="width: 200px; text-align: center;"><img src="juroscompostos.png" alt="" width="200" height="200" />
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Imagem gerada com IA</em></span></figcaption>
+</figure>
+<p><strong>Vamos imaginar juntos que a equação \(\;y\,'=0.1\,y\;\) descreve o rendimento de um dinheiro que você investiu inicialmente, \(y_0\)​, em um fundo de investimento.</strong> Aqui, \(y\) representa o saldo atual. Mesmo sem saber muito sobre finanças, já conseguimos entender algo importante: o aumento do saldo \(y\,'\) em qualquer momento é proporcional ao saldo naquele instante. Isso significa que quanto mais dinheiro você investir no início, mais rápido ele crescerá. Legal, né?</p>
+<p>Agora, vamos explorar os elementos dessa equação diferencial de forma simples:</p>
+<ul>
+<li><strong>O que é \(y(t)\)?</strong><br />\(y(t)\) representa o saldo total no fundo de investimento ao longo do tempo \(t\) (geralmente em anos). A condição inicial \(y(0)=y_0\)​ é o valor que você investiu no início. Vamos supor que \(y_0&gt;0\), ou seja, começamos com um saldo positivo (ninguém quer falar de dívidas agora, certo?).</li>
+<li><strong>O que é \(y\,'(t)\)?</strong><br />\(y\,'(t)\) é a taxa de crescimento do saldo, ou seja, quanto o seu investimento está rendendo naquele momento. Esse rendimento depende diretamente do saldo atual. Mais saldo = mais rendimento.</li>
+<li><strong>Por que o saldo \(y\) sempre cresce?</strong><br />O saldo aumenta com o tempo porque o rendimento \(y\,'(t)\) é sempre positivo enquanto \(y&gt;0\). Isso é garantido pela equação \(y\,'(t)=0.1\,y&gt;0\), se \(y&gt;0\). Então, o gráfico da função \(y(t)\) é sempre crescente. Quanto mais tempo passa, maior fica o saldo.</li>
+<li><strong>O que significa a constante \(0.1\)?</strong><br />Essa constante indica que o saldo cresce a uma taxa contínua de \(10\%\) ao ano. Isso é crescimento exponencial! Ou seja, o saldo não aumenta de forma linear, mas cada vez mais rápido à medida que o tempo passa.</li>
+</ul>
+<p>Agora, uma coisa importante: a equação \(y\,'=0.1\,y\) não pode ser resolvida apenas "integrando diretamente", porque o lado direito também depende de \(y\). Mas não se preocupe! Vamos aprender a resolver essas equações passo a passo. Por enquanto, nosso objetivo é entender o que a equação nos diz, mesmo sem resolvê-la.</p>
+<p><strong>O que a equação \(y\,'=0.1\,y\) nos diz?</strong></p>
+<p>Ela nos diz que:</p>
+<p>Se \(y&gt;0\), então \(y\,'\) é positivo. Isso significa que o saldo está aumentando nesse instante. A tangente ao gráfico da solução \(y(t)\) terá inclinação positiva.<br />Se \(y&lt;0\), então \(y\,'\) será negativo. Isso significa que o saldo está diminuindo naquele momento. E, bom, se começar com dívida, a coisa só piora!! </p>
+<p><strong>Vamos explorar isso com um exemplo visual!</strong></p>
+<p>No gráfico abaixo, desenhamos pequenos segmentos em vários pontos \((a,b)\) do plano cartesiano. Cada segmento tem uma inclinação igual a \(y\,'(a)\), que é dada por \(y\,'(a)=0.1b\). Veja:</p>
+<p>No ponto \(M=(4,8)\), o saldo é \(8\). A derivada é \(y\,'(4)=0.1 \cdot 8 = 0.8 &gt; 0\). Isso significa que, nesse ponto, o saldo está aumentando. Você está ganhando dinheiro! </p>
+<p>Agora, no ponto \(N=(6,−5)\), o saldo é \(−5\). A derivada é \(y\,'(6)= 0.1 \cdot (-5) = -0.5 &lt; 0\). Nesse caso, o saldo está diminuindo, porque começou negativo. Isso é o equivalente a estar mais endividado do que começou. </p>
+<p>Se você observar os segmentos no gráfico, verá que:</p>
+<p>Onde o saldo é positivo \(y&gt;0\), os segmentos sobem e o saldo aumenta.<br />Onde o saldo é negativo \(y&lt;0\), os segmentos descem e o saldo diminui.</p>
+<p><img src="campojuros.png" width="300" height="290" /></p>
+<p><strong>Agora, veja as soluções no gráfico!</strong></p>
+<p>Além dos segmentos, adicionamos as soluções no gráfico abaixo. Veja como o segmento é tangente à curva solução. Isso acontece porque o segmento representa a derivada da função naquele ponto!</p>
+<p>A solução que passa por \(M\) é crescente, pois começou com saldo positivo, e a derivada portanto é positiva. Já a solução que passa por \(N\) é decrescente, pois começou com saldo negativo. Isso reflete a diferença entre investir dinheiro poupado (saldo positivo) e pedir um empréstimo que não consegue pagar (saldo negativo). Ambos crescem exponencialmente, mas em direções opostas: um traz alegria e o outro, ansiedade!<br /><br /><img src="campojuros2.png" alt="" width="400" height="346" /></p>
+<p>Viu como você consegue dizer muita coisa sem resolver a EDO? Esses gráficos se chamam <a title="Curiosidade" class="exe-dialog-link" rel="lightbox" href="#t485f5e29-50aa-1347-b546-183b22a147f8" id="link485f5e29-50aa-1347-b546-183b22a147f8">campo de direções</a> da EDO \(y'=f(x,y).\) São muito úteis para "unir" os pontos dos segmentos e ter uma ideia de como serão as curvas integrais das soluções sem saber a cara delas.  </p>
+<p>Com essa visão geral, você já tem as ferramentas para interpretar o que uma equação diferencial nos diz sobre o problema, mesmo sem resolvê-la. Em breve, aprenderemos como encontrar as soluções matemáticas dessas equações. </p>
+<p></p>
+<div id="t485f5e29-50aa-1347-b546-183b22a147f8" class="exe-dialog-text js-hidden">
+<p>Em inglês se chama slope field (campo de inclinações). Em dimensão dois ou mais, chamaremos de campo vetorial. Isso é devido a que as soluções são parametrizações de curvas. E a derivada de uma curva é um vetor. Se ainda está curioso, pergunte seu professor!!</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper GeoGebraIdevice em_iDevice em_iDevice_assignment_list" id="id44">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment_list.png)"><h1 class="iDeviceTitle">BRINQUE COM OS CAMPOS DE DIREÇÕES</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta44_122_2" class="block iDevice_content">
+<div class="auto-geogebra auto-geogebra-p5uyynzj auto-geogebra-width-1536 auto-geogebra-height-703 showResetIcon auto-geogebra-scale-100"><p><a href="https://www.geogebra.org/m/p5uyynzj" target="_blank">https://www.geogebra.org/m/p5uyynzj (New Window)</a></p><div class="auto-geogebra-author js-hidden">REDMAT%20-%20%20UFF,https%3A//www.geogebra.org/m/p5uyynzj,Campo%20de%20dire%E7%F5es%20EDO%201a%20ordem,1,Authorship</div><div class="auto-geogebra-extra-content"><p></p>
+<p><strong>1. Coloque nosso modelo de investimento \(y\,'=0.1\,y\) no campo de entrada</strong>. Observe como mudam as soluções dependendo do ponto P. O campo de direções é sempre o mesmo, pois depende da EDO em si. As inclinações são positivas para \(y&gt;0\) e negativas para \(y&lt;0\). Para \(y=0\) as inclinações todas são horizontais, independentemente do ponto \(x_0\). Isso é porque \(y=0\) é solução da EDO.</p>
+<p><strong>2. Altere agora a taxa de juros no nosso modelo, por exemplo \(20\%\) ao ano</strong>. Isto é, insira \(y\,'=0.2\,y\) no campo de entrada. Observe como as inclinações do campo aumentam. Isso se traduz em que nosso saldo cresce mais rapidamente. Faz sentido, né?</p>
+<p><strong>3. Agora insira \(y\,'=y(y-1)\) no campo de entrada</strong>. Observe que:<br />- Ao posicionar o ponto P na reta \(y=0\) ou \(y=1\) o campo é horizontal. Isso significa que a derivada é zero em todos os pontos e as funções constantes \(y=0\) e \(y=1\) são solução da EDO. Já achamos duas e não fizemos conta nenhuma! Ebaaaa<br />As soluções que zeram a derivada são chamadas de solução de equilíbrio. Pois a taxa de variação é nula e nada varia. Os sistema fica em equilíbrio mesmo. </p>
+<p>- Ao posicionar o ponto P acima da reta \(y=1\) aparecem duas curvas. Uma acima da reta \(y=1\) e outra abaixo da reta \(y=0\). Isso porque o Geogebra (assim como fez o chatgpt) confundem gráfico da função solução com a curva integral. Acesse o conteúdo de gráfico vs curva integral no <a href="https://redmatuff.github.io/calculo2edointro/" target="_blank" rel="noopener">ebook de Introdução às EDO</a>. A curva integral de verdade seria apenas o ramo que está acima da reta \(y=1\), pois é o ramo que contêm o ponto P.</p>
+<p>- Acontece mesma coisa quando posicionar o ponto P abaixo da reta \(y=0\). Neste caso, a curva integral de verdade seria apenas o ramo que está abaixo da reta \(y=0\), pois, de novo, é o ramo que contêm o ponto P.</p>
+<p>Se atente com os resultados que a tecnologia mostra. As vezes são enganosos! </p>
+<p>Sacou?</p>
+<p>Você não está sozinho!! Procure o professor ou nossos monitores se tiveres qualquer dúvida. </p>
+<p>Força!</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_question" id="id45">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_question.png)"><h1 class="iDeviceTitle">CAMPO DE DIREÇÕES: Teste sua leitura</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta45_123_2" class="block iDevice_content">
+<div class="exe-text"><p><strong><img src="1.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />Identificando o comportamento local</strong></p>
+<p>Considere o campo de direções associado à equação diferencial \(y'=y(y−1).\)</p>
+<p>(a) Desenhe o campo de direções nos pontos \((0,0)\), \((1,1)\) e \((2,−1)\), indicando a inclinação do segmento de cada ponto.</p>
+<p>(b) Qual é o comportamento da solução que passa por \((0,0)\)? Ela cresce ou decresce?</p>
+<p>(c) Qual é o comportamento da solução que passa por \((1,1)\)? É crescente, decrescente ou constante? Justifique.</p>
+<p class="js-required"><input type="button" value="Solução" onclick="$('#solexe1campos').toggle()" /></p>
+<div id="solexe1campos" class="js-hidden">
+<p>Lembrando que a EDO é \(y'=y(y−1).\)</p>
+<p>(a) Desenhe o campo de direções nos pontos \((0,0)\), \((1,1)\) e \((2,−1)\), indicando a inclinação.</p>
+<p>No ponto \((0,0)\), \(y'=0\cdot(0−1)=0\). A inclinação é zero, e o segmento é horizontal.<br />No ponto \((1,1)\), \(y'=1\cdot(1−1)=0\). A inclinação é zero, e o segmento é horizontal.<br />No ponto \((2,−1)\), \(y'=−1\cdot (−1−1)=−1\cdot(−2)=2. A inclinação é positiva e íngreme.</p>
+<p>(b) Qual é o comportamento da solução que passa por \((0,0)\)?<br />A inclinação \(y'=0\) no ponto \((0,0)\) significa que a solução é constante nesse ponto.</p>
+<p>(c) Qual é o comportamento da solução que passa por \((1,1)\)?<br />Da mesma forma, \(y'=0\) no ponto \((1,1)\) indica que a solução é constante nesse ponto.</p>
+</div>
+<p><br /><strong><img src="2.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />Relacionando pontos e inclinações</strong></p>
+<p>O campo de direções de uma EDO é dado por \(y'=x−y.\)</p>
+<p>(a) No ponto \(A=(1,2)\), calcule a inclinação \(y'(1)\) e interprete o comportamento da solução no gráfico.</p>
+<p>(b) No ponto \(B=(2,−1)\), calcule a inclinação \(y'(2)\) e descreva se a solução está subindo ou descendo.</p>
+<p>(c) Quais pontos têm inclinação zero? Justifique encontrando os pontos no plano.</p>
+<p class="js-required"><input type="button" value="Solução" onclick="$('#solexe2campos').toggle()" /></p>
+<div id="solexe2campos" class="js-hidden">
+<p>Lembrando que a EDO é \(y'=x-y.\)</p>
+<p>(a) No ponto \(A=(1,2)\), calcule a inclinação \(y'(1)\) e interprete o comportamento da solução.</p>
+<p>Substituindo \(x=1\) e \(y=2\) na EDO, obtemos que \(y'(1)=1−2=−1&lt;0\). A inclinação é negativa, então a solução decresce nesse ponto.</p>
+<p>(b) No ponto \(B=(2,−1)\), calcule a inclinação \(y'(2)\) e descreva se a solução está subindo ou descendo.<br />Substituindo \(x=2\) e \(y=−1\) na EDO, obtemos que \(y'(2)=2−(−1)=3&gt;0\). A inclinação é positiva, então a solução está crescendo nesse ponto.</p>
+<p>(c) Quais pontos têm inclinação zero? Justifique encontrando os pontos no plano.</p>
+<p>A inclinação \(y'\) é zero quando \(x−y=0\), ou seja quando \(x=y\). Assim, todos os pontos na reta \(y=x\), como por exemplo \((0,0), (1,1)\) ou \((−2,−2)\) terão segmentos horizontais. Isto é, o campo é horizontal na reta \(y=x\).</p>
+</div>
+<p><br /><strong><img src="3.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />Explorando curvas integrais</strong></p>
+<p>Suponha que a EDO \(y'=2y\) modela o crescimento exponencial de uma cultura bacteriana.</p>
+<p>(a) No ponto \(M=(0,3)\), calcule a inclinação \(y'(0)\). A solução nesse ponto é crescente ou decrescente?</p>
+<p>(b) Suponha que a solução passa pelo ponto \(P=(1,−2)\). A curva integral associada é crescente ou decrescente? Justifique.</p>
+<p>(c) O ponto \(N=(0,0)\) está no campo de direções. O que você pode dizer sobre a solução que passa por \(N\)?</p>
+<p> <input type="button" value="Solução" onclick="$('#solexe3campos').toggle()" /></p>
+<div id="solexe3campos" class="js-hidden">
+<p>Lembrando que a EDO é \(y'=2y.\)</p>
+<p>(a) No ponto \(M=(0,3)\), calcule a inclinação \(y'(0)\). A solução nesse ponto é crescente ou decrescente?<br />Substituindo \(y=3\) na EDO, obtemos que \(y'(0)=2\cdot 3 = 6.\) A inclinação é positiva, então a solução está crescendo nesse ponto.</p>
+<p>(b) Suponha que a solução passa pelo ponto \(P=(1,−2)\). A curva integral associada é crescente ou decrescente? Justifique.<br />Substituindo \(y=−2\) na EDO, obtemos que \(y'(1)= 2 \cdot (-2) = −4.\) A inclinação é negativa, então a solução está decrescendo.</p>
+<p>(c) O ponto \(N=(0,0)\) está no campo de direções. O que você pode dizer sobre a solução que passa por \(N\)?<br />Substituindo \(y=0\) na EDO, obtemos que \(y'(0)=2 \cdot 0 = 0.\)  A inclinação é zero, então a solução que passa por \(N\) é constante. Isso significa que \(y(t)=0\) é uma solução particular.</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Sob licença</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição Compartilha Igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="separao_de_variveis.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (Nova janela)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

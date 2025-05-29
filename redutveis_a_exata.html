@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Redutíveis a exata | EDO de Primeira Ordem </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Begoña Alarcón Cotillas" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site exe-auto-math" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar navegação</a></p>
+<header id="header" ><div id="headerContent">EDO de Primeira Ordem</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Instruções</a></li>
+   <li><a href="o_que__uma_edo_de_primeira_ordem.html" class="no-ch">O que é uma EDO de primeira ordem?</a></li>
+   <li><a href="separao_de_variveis.html" class="no-ch">Separação de variáveis</a></li>
+   <li><a href="lineares.html" class="no-ch">Lineares</a></li>
+   <li class="current-page-parent"><a href="exatas.html" class="current-page-parent daddy">Exatas</a>
+   <ul>
+      <li><a href="mtodo_para_resolver_edo_exatas.html" class="no-ch">Método para resolver EDO exatas</a></li>
+      <li id="active"><a href="redutveis_a_exata.html" class="active no-ch">Redutíveis a exata</a></li>
+   </ul>
+   </li>
+   <li><a href="geogebra.html" class="no-ch">Geogebra</a></li>
+   <li><a href="exerccios.html" class="no-ch">Exercícios</a></li>
+   <li><a href="avalie_o_recurso.html" class="no-ch">Avalie o recurso!</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="mtodo_para_resolver_edo_exatas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="geogebra.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Redutíveis a exata</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_announcement_white" id="id63">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_announcement_white.png)"><span class="iDeviceTitle">&nbsp;</span></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta63_124_2" class="block iDevice_content">
+<div class="exe-text"><p>Já chegou até aqui? Sem pular etapas? Parabéns!!!! Uhuuuu</p>
+<p>Agora veremos um tipo de EDO que não é exata, mas mesmo assim existe uma função mágica \(\mu(x,y)\) que transforma a EDO em exata. Essa função é chamada de fator integrante. </p>
+<p>Sim, este fator integrante é irmãozinho do fator integrante das <a href="lineares.html" title="Acesse aqui o conteúdo" class="exe-tooltip plain-tt">EDO lineares</a>. Você está certo!</p>
+<p>Vamos tentar resolver a EDO \((e^{2x}+y-1)\, dx-dy=0,\) sabendo que \(\mu=e^{-x}\) é um fator integrante.</p>
+<p>Fazendo \(M(x,y)=e^{2x}+y-1\) e \(N(x,y)=-1\), vemos que </p>
+<p>\(\dfrac{\partial M}{\partial y} =1\) e \(\dfrac{\partial N}{\partial x} = 0.\)</p>
+<p>Como \(\dfrac{\partial M}{\partial y} \neq \dfrac{\partial N}{\partial x}\)​, a equação não é exata.</p>
+<p>Vamos multiplicar a EDO pela função \(\mu(x)=e^{-x}\):</p>
+<p>\(e^{-x}(e^{2x}+y-1)\,dx-e^{-x}\,dy=0.\)</p>
+<p>Simplificando:</p>
+<p>\(e^{x}+(y-1)e^{-x}) \, dx -e^{-x} \, dy = 0.\)</p>
+<p>Verifiquemos agora que sim é exata:</p>
+<p>Identificamos \(M(x,y)=e^{x}+(y-1)e^{-x}\) e \(N(x,y)=-e^{-x}\)</p>
+<p>Calculamos as parciais, </p>
+<p>\(\dfrac{\partial M}{\partial y} = e^{-x}\) e \(\dfrac{\partial N}{\partial x} = e^{-x}.\)</p>
+<p>Como \(\dfrac{\partial M}{\partial y} = \dfrac{\partial N}{\partial x}\), a nova equação sim é exata.</p>
+<p>E sendo exata, podemos <a href="exatas.html" title="Acesse aqui o conteúdo de exatas" class="exe-tooltip plain-tt">resolvê-la normalmente</a>.</p>
+<p>Integramos \(N(x,y)\) em relação a \(y\) para encontrar a expressão de \(f(x,y)\):</p>
+<p>\(f(x,y)=\displaystyle\int N(x,y)dy + h(x)=\displaystyle\int -e^{-x}dy + h(x)=-e^{-x}y+h(x)\)</p>
+<p>Derivamos a expressão anterior em relação a \(x\) e igualamos a \(M(x,y)):</p>
+<p>\(e^{-x}y+h'(x)=e^{x}+(y-1)e^{-x}\)</p>
+<p>Simplificando:</p>
+<p>\(h'(x)=e^{x}-e^{-x}\)</p>
+<p>Derivando:</p>
+<p>\(h(x)=e^{x}+e^{-x}\)</p>
+<p>Então a função potencial é:</p>
+<p>\(f(x,y)=-e^{-x}y+e^{x}+e^{-x}\)</p>
+<p>E a solução geral da EDO é:</p>
+<p>\(-e^{-x}y+e^{x}+e^{-x}=C,\) onde \(C\) é uma constante arbitrária.</p>
+<p>ou equivalentemente,</p>
+<p>\(y=e^{x}\left(C+e^{x}+e^{-x}\right)=Ce^x+e^{2x}+1,\) onde \(C\) é uma constante arbitrária.</p>
+<p>O campo de direções da EDO é apesentado na figura a seguir. As curvas vermelhas representam as <a href="https://www.instagram.com/p/DJ__F3GMrHx/?next=%2F" target="_blank" title="Aprenda a fazer no Geogebra" rel="noopener">curvas integrais</a>:</p>
+<figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="img0.3.png" alt="" width="300" height="353" />
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Campo de direções da EDO \(y'=e^{2x}+y-1\)</em></span></figcaption>
+</figure></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id83">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Teste sua leitura</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-83_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion83_86" class="block question iDevice_content">
+<p><img src="1.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A função \( \mu(y) = \dfrac{1}{y} \) é um fator integrante para a seguinte EDO?<br />\[xy \, dx + y \ln y \, dy = 0\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_89" class="sr-av"><a href="#answer-83_89">Opção 1</a></label><input type="radio" name="option83_86" id="i83_89" class="exe-radio-option exe-radio-option-0-3-83_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_89"><div id="taans83_89" class="block iDevice_content">
+<p>Sim, pois torna a equação exata. </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_92" class="sr-av"><a href="#answer-83_92">Opção 2</a></label><input type="radio" name="option83_86" id="i83_92" class="exe-radio-option exe-radio-option-1-3-83_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_92"><div id="taans83_92" class="block iDevice_content">
+<p>Não, pois a EDO já é exata.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1389" class="sr-av"><a href="#answer-83_1389">Opção 3</a></label><input type="radio" name="option83_86" id="i83_1389" class="exe-radio-option exe-radio-option-2-3-83_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1389"><div id="taans83_1389" class="block iDevice_content">
+<p>Não, pois não torna a equação exata</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b83_86" class="feedback js-hidden">
+<div id="taf83_89" class=" iDevice_content">
+<p>Acertou! Muito bem!</p>
+</div>
+</section>
+<section id="sa1b83_86" class="feedback js-hidden">
+<div id="taf83_92" class=" iDevice_content">
+<p>Errada. Tente uma outra vez!</p>
+</div>
+</section>
+<section id="sa2b83_86" class="feedback js-hidden">
+<div id="taf83_1389" class=" iDevice_content">
+<p>Errada. Tente refazer as contas com mais calma!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-83_89">Opção correta</a><span> (<a href="#sa0b83_86">Feedback</a>)</span></li>
+<li><a href="#answer-83_92">Errado</a><span> (<a href="#sa1b83_86">Feedback</a>)</span></li>
+<li><a href="#answer-83_1389">Errado</a><span> (<a href="#sa2b83_86">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-83_95" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion83_95" class="block question iDevice_content">
+<p><img src="2.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A função \( \mu(y) = x^2 \) é um fator integrante para a seguinte EDO?</p>
+<p>\[(2x + 3y) \, dx + (3x + 4y) \, dy = 0\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_98" class="sr-av"><a href="#answer-83_98">Opção 1</a></label><input type="radio" name="option83_95" id="i83_98" class="exe-radio-option exe-radio-option-0-3-83_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_98"><div id="taans83_98" class="block iDevice_content">
+<p>Sim, pois torna a equação exata. </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_101" class="sr-av"><a href="#answer-83_101">Opção 2</a></label><input type="radio" name="option83_95" id="i83_101" class="exe-radio-option exe-radio-option-1-3-83_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_101"><div id="taans83_101" class="block iDevice_content">
+<p>Não, pois a EDO já é exata.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1393" class="sr-av"><a href="#answer-83_1393">Opção 3</a></label><input type="radio" name="option83_95" id="i83_1393" class="exe-radio-option exe-radio-option-2-3-83_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1393"><div id="taans83_1393" class="block iDevice_content">
+<p>Não, pois não torna a equação exata</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b83_95" class="feedback js-hidden">
+<div id="taf83_98" class=" iDevice_content">
+<p>Errada. As derivadas parciais de fato são iguais. Refaça seus cálculos!</p>
+</div>
+</section>
+<section id="sa1b83_95" class="feedback js-hidden">
+<div id="taf83_101" class=" iDevice_content">
+<p>Certa! Boa reflexão!</p>
+</div>
+</section>
+<section id="sa2b83_95" class="feedback js-hidden">
+<div id="taf83_1393" class=" iDevice_content">
+<p>Errada. Pense com mais calma!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-83_98">Errado</a><span> (<a href="#sa0b83_95">Feedback</a>)</span></li>
+<li><a href="#answer-83_101">Opção correta</a><span> (<a href="#sa1b83_95">Feedback</a>)</span></li>
+<li><a href="#answer-83_1393">Errado</a><span> (<a href="#sa2b83_95">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-83_1396" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion83_1396" class="block question iDevice_content">
+<p><img src="3.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A função \( \mu(x) = x^2 \) é um fator integrante para a seguinte EDO?</p>
+<p>\[(2xy^3 + y^4)dx + (x^2y^2 + 2xy^3)dy = 0\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1399" class="sr-av"><a href="#answer-83_1399">Opção 1</a></label><input type="radio" name="option83_1396" id="i83_1399" class="exe-radio-option exe-radio-option-0-3-83_1396-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1399"><div id="taans83_1399" class="block iDevice_content">
+<p>Sim, pois torna a equação exata. </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1402" class="sr-av"><a href="#answer-83_1402">Opção 2</a></label><input type="radio" name="option83_1396" id="i83_1402" class="exe-radio-option exe-radio-option-1-3-83_1396-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1402"><div id="taans83_1402" class="block iDevice_content">
+<p>Não, pois a EDO já é exata.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1406" class="sr-av"><a href="#answer-83_1406">Opção 3</a></label><input type="radio" name="option83_1396" id="i83_1406" class="exe-radio-option exe-radio-option-2-3-83_1396-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1406"><div id="taans83_1406" class="block iDevice_content">
+<p>Não, pois não torna a equação exata</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b83_1396" class="feedback js-hidden">
+<div id="taf83_1399" class=" iDevice_content">
+<p>Errada! Tente de novo! Força!</p>
+</div>
+</section>
+<section id="sa1b83_1396" class="feedback js-hidden">
+<div id="taf83_1402" class=" iDevice_content">
+<p>Errada! As parciais são diferentes! Checa suas contas!</p>
+</div>
+</section>
+<section id="sa2b83_1396" class="feedback js-hidden">
+<div id="taf83_1406" class=" iDevice_content">
+<p>Certa! Parabéns!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-83_1399">Errado</a><span> (<a href="#sa0b83_1396">Feedback</a>)</span></li>
+<li><a href="#answer-83_1402">Errado</a><span> (<a href="#sa1b83_1396">Feedback</a>)</span></li>
+<li><a href="#answer-83_1406">Opção correta</a><span> (<a href="#sa2b83_1396">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-83_1409" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion83_1409" class="block question iDevice_content">
+<p><img src="C__Users_avela_OneDrive_Desktop_Monitoria_4.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A função \( \mu(x) = \frac{1}{x} \) é um fator integrante para a seguinte EDO?</p>
+<p>\[x(\cos x + y) dx + x^2 dy = 0\]</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1412" class="sr-av"><a href="#answer-83_1412">Opção 1</a></label><input type="radio" name="option83_1409" id="i83_1412" class="exe-radio-option exe-radio-option-0-3-83_1409-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1412"><div id="taans83_1412" class="block iDevice_content">
+<p>Sim, pois torna a equação exata. </p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1415" class="sr-av"><a href="#answer-83_1415">Opção 2</a></label><input type="radio" name="option83_1409" id="i83_1415" class="exe-radio-option exe-radio-option-1-3-83_1409-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1415"><div id="taans83_1415" class="block iDevice_content">
+<p>Não, pois a EDO já é exata.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i83_1419" class="sr-av"><a href="#answer-83_1419">Opção 3</a></label><input type="radio" name="option83_1409" id="i83_1419" class="exe-radio-option exe-radio-option-2-3-83_1409-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-83_1419"><div id="taans83_1419" class="block iDevice_content">
+<p>Não, pois não torna a equação exata</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b83_1409" class="feedback js-hidden">
+<div id="taf83_1412" class=" iDevice_content">
+<p>Certa! Excelente trabalho!</p>
+</div>
+</section>
+<section id="sa1b83_1409" class="feedback js-hidden">
+<div id="taf83_1415" class=" iDevice_content">
+<p>Errada! Verifique suas contas!</p>
+</div>
+</section>
+<section id="sa2b83_1409" class="feedback js-hidden">
+<div id="taf83_1419" class=" iDevice_content">
+<p>Errada! O fator de fato torna a EDO exata.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-83_1412">Opção correta</a><span> (<a href="#sa0b83_1409">Feedback</a>)</span></li>
+<li><a href="#answer-83_1415">Errado</a><span> (<a href="#sa1b83_1409">Feedback</a>)</span></li>
+<li><a href="#answer-83_1419">Errado</a><span> (<a href="#sa2b83_1409">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_assignment" id="id64">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_assignment.png)"><h1 class="iDeviceTitle">CÁLCULO DO FATOR INTEGRANTE</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_125_2" class="block iDevice_content">
+<div class="exe-text"><p>Agora vem a parte complicada... Como calculo esse fator integrante?</p>
+<p>Lembrando que queremos encontrar uma função \(\mu(x,y)\) tal que </p>
+<p>\[\mu(x,y) M(x,y)dx+\mu(x,y)N(x,y)=0\]</p>
+<p>seja exata.</p>
+<p>Para isso \(\frac{\partial (\mu M)}{\partial y} = \frac{\partial (\mu N)}{\partial x}\)</p>
+<p>Vamos abrir essas <a title="Detalhe!" class="exe-dialog-link" rel="lightbox" href="#te28173ed-b6b2-5c37-e37f-3abc58656973" id="linke28173ed-b6b2-5c37-e37f-3abc58656973">parciais</a>:</p>
+<p>\( M\,\mu_y+ M_y \,\mu= N \,\mu_x+ N_x\,\mu \quad \) (1)</p>
+<p>Para simplificar as contas, vamos distinguir três casos:</p>
+<p><strong>Caso 1: \(\mu\) só depende de \(x\).</strong></p>
+<p>Então \(\mu_y=0\) e podemos simplificar a equação (1):</p>
+<p>\( M_y\, \mu = N\,\dfrac{d\mu}{dx} + N_x \,\mu\)</p>
+<p>Isolando \(\dfrac{d\mu}{dx}\) obtemos a seguinte expressão: </p>
+<p>\(\dfrac{d\mu}{dx}=\dfrac{M_y-N_x}{N}\, \mu\) (2)</p>
+<p>Agora vem a parte importante. <strong>Se \(\dfrac{M_y-N_x}{N}\) não depender de \(y\)</strong>. Então (2) é uma EDO linear de primeira ordem.</p>
+<p>Resolvendo essa EDO:</p>
+<p>\(\displaystyle{\mu(x)=e^{\int\, \frac{M_y-N_x}{N}\, dx}}\)</p>
+<p><strong>Caso 2: \(\mu\) só depende de \(y\).</strong></p>
+<p>Então \(\mu_x=0\) e podemos simplificar a expressão (1):</p>
+<p>\( M\,\dfrac{d\mu}{dy}+ M_y \,\mu= N_x\,\mu\)</p>
+<p>Isolando \(\dfrac{d\mu}{dy}\) obtemos a seguinte expressão: </p>
+<p>\(\dfrac{d\mu}{dy}=\dfrac{N_x-M_y}{M}\, \mu\) (3)</p>
+<p>Agora vem a parte importante. Se <strong>\(\dfrac{N_x-M_y}{M}\) não depender de \(x\)</strong>. Então (3) é uma EDO linear de primeira ordem.</p>
+<p>Resolvendo essa EDO:</p>
+<p>\(\displaystyle{\mu(y)=e^{\int\, \frac{N_x-M_y}{M}\, dy}}\)</p>
+<p><strong>Caso 3: \(\mu\) depende de \(x\) e de \(y\).</strong></p>
+<p>Nesse caso, vamos ter que esperar a um cálculo mais avançado porque a equação (1) seria uma Equação em Derivadas Parciais (EDP) e nesse curso somente estudamos Equações Diferenciais Ordinárias (EDO).</p>
+<p>A resposta seria, não admite fator integrante. Embora possa admitir em um caso mais geral do que o contemplado nesse texto.</p>
+<div id="te28173ed-b6b2-5c37-e37f-3abc58656973" class="exe-dialog-text js-hidden">
+<p>\(f_x\) denota a derivada parcial da função \(f\) em relação a \(x\), isto é, \(\frac{\partial f}{\partial x}\). Analogamente, \(f_y\) denota a derivada parcial da função \(f\) em relação a \(y\), isto é, \(\frac{\partial f}{\partial y}\)</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id80">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Teste sua leitura</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-80_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion80_86" class="block question iDevice_content">
+<p><img src="1.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A EDO \(y \, dx + x \ln x \, dy = 0\) admite fator integrante?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_89" class="sr-av"><a href="#answer-80_89">Opção 1</a></label><input type="radio" name="option80_86" id="i80_89" class="exe-radio-option exe-radio-option-0-2-80_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_89"><div id="taans80_89" class="block iDevice_content">
+<p>sim</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_1353" class="sr-av"><a href="#answer-80_1353">Opção 2</a></label><input type="radio" name="option80_86" id="i80_1353" class="exe-radio-option exe-radio-option-1-2-80_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_1353"><div id="taans80_1353" class="block iDevice_content">
+<p>não</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b80_86" class="feedback js-hidden">
+<div id="taf80_89" class=" iDevice_content">
+<p>Correto! Bom trabalho! O fator é \( \mu(x) = \frac{1}{x} .\)</p>
+</div>
+</section>
+<section id="sa1b80_86" class="feedback js-hidden">
+<div id="taf80_1353" class=" iDevice_content">
+<p>Errada. A EDO admite fator integrante.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-80_89">Opção correta</a><span> (<a href="#sa0b80_86">Feedback</a>)</span></li>
+<li><a href="#answer-80_1353">Errado</a><span> (<a href="#sa1b80_86">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-80_95" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion80_95" class="block question iDevice_content">
+<p><img src="2.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A EDO \( \left( \sin(x)+3y\right)dx+y\ln(x)dy=0\) admite fator integrante?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_98" class="sr-av"><a href="#answer-80_98">Opção 1</a></label><input type="radio" name="option80_95" id="i80_98" class="exe-radio-option exe-radio-option-0-2-80_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_98"><div id="taans80_98" class="block iDevice_content">
+<p>Sim</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_1350" class="sr-av"><a href="#answer-80_1350">Opção 2</a></label><input type="radio" name="option80_95" id="i80_1350" class="exe-radio-option exe-radio-option-1-2-80_95-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_1350"><div id="taans80_1350" class="block iDevice_content">
+<p>não</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b80_95" class="feedback js-hidden">
+<div id="taf80_98" class=" iDevice_content">
+<p>Errado. Tente refazer os cálculos.</p>
+</div>
+</section>
+<section id="sa1b80_95" class="feedback js-hidden">
+<div id="taf80_1350" class=" iDevice_content">
+<p>Certo! A EDO não admite fator integrante pois \(\dfrac{N_x-M_y}{M}\) não depende somente de \(y\) e \(\dfrac{M_x-N_x}{N}\) não depende somente de \(x.\)</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-80_98">Errado</a><span> (<a href="#sa0b80_95">Feedback</a>)</span></li>
+<li><a href="#answer-80_1350">Opção correta</a><span> (<a href="#sa1b80_95">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-80_1366" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion80_1366" class="block question iDevice_content">
+<p><img src="3.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A EDO \( \left(3x^3+y\right)dx+xy^2dy=0\) admite fator integrante?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_1369" class="sr-av"><a href="#answer-80_1369">Opção 1</a></label><input type="radio" name="option80_1366" id="i80_1369" class="exe-radio-option exe-radio-option-0-2-80_1366-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_1369"><div id="taans80_1369" class="block iDevice_content">
+<p>sim</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_1372" class="sr-av"><a href="#answer-80_1372">Opção 2</a></label><input type="radio" name="option80_1366" id="i80_1372" class="exe-radio-option exe-radio-option-1-2-80_1366-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_1372"><div id="taans80_1372" class="block iDevice_content">
+<p>não</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b80_1366" class="feedback js-hidden">
+<div id="taf80_1369" class=" iDevice_content">
+<p>Errado. Tente refazer seus passos!</p>
+</div>
+</section>
+<section id="sa1b80_1366" class="feedback js-hidden">
+<div id="taf80_1372" class=" iDevice_content">
+<p>Certo! A EDO não admite fator integrante pois \(\dfrac{N_x-M_y}{M}\) não depende somente de \(y\) e \(\dfrac{M_x-N_x}{N}\) não depende somente de \(x.\)</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-80_1369">Errado</a><span> (<a href="#sa0b80_1366">Feedback</a>)</span></li>
+<li><a href="#answer-80_1372">Opção correta</a><span> (<a href="#sa1b80_1366">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+<section class="question">
+<form name="multi-choice-form-80_1376" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pergunta</h1>
+<div id="taquestion80_1376" class="block question iDevice_content">
+<p><img src="C__Users_avela_OneDrive_Desktop_Monitoria_4.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />A EDO \((2xy^3 + y^4)dx + (x^2y^2 + 2xy^3)dy = 0\) admite fator integrante?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respostas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_1379" class="sr-av"><a href="#answer-80_1379">Opção 1</a></label><input type="radio" name="option80_1376" id="i80_1379" class="exe-radio-option exe-radio-option-0-2-80_1376-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_1379"><div id="taans80_1379" class="block iDevice_content">
+<p>sim</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_1382" class="sr-av"><a href="#answer-80_1382">Opção 2</a></label><input type="radio" name="option80_1376" id="i80_1382" class="exe-radio-option exe-radio-option-1-2-80_1376-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_1382"><div id="taans80_1382" class="block iDevice_content">
+<p>não</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Feedback</h1>
+<section id="sa0b80_1376" class="feedback js-hidden">
+<div id="taf80_1379" class=" iDevice_content">
+<p>Na mosca! O fator integrante é \( \mu(y) = \frac{1}{y^2}. \)</p>
+</div>
+</section>
+<section id="sa1b80_1376" class="feedback js-hidden">
+<div id="taf80_1382" class=" iDevice_content">
+<p>Errada. A EDO admite fator integrante. Tente mais uma vez!</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solução</h1>
+<ol>
+<li><a href="#answer-80_1379">Opção correta</a><span> (<a href="#sa0b80_1376">Feedback</a>)</span></li>
+<li><a href="#answer-80_1382">Errado</a><span> (<a href="#sa1b80_1376">Feedback</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id100">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">METODO PARA RESOLVER EDO REDUTÍVEL A EXATA</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta100_120_2" class="block iDevice_content">
+<div class="exe-text"><p>Pronto! Já estamos preparados para resolver uma EDO que não é exata, mas que ainda dá um jeito de resolver.</p>
+<p>Consideremos a EDO \(M(x,y)\, dx + N(x,y)\, dy=0\) não sendo exata, isto é, quando \(\dfrac{dM}{dy}\neq \dfrac{dN}{dx}\).</p>
+<p><strong>Resumindo:</strong> O método para resolver EDO redutíveis a exatas é uma técnica para resolver EDOs de primeira ordem quando a EDO não exata admite um fator integrante. Os passos são:</p>
+<p>1. Reorganizar a equação para colocar ela na forma padrão para dentificar \(M(x,y)\) e \(N(x,y).\)<br />2. Verificar se a EDO é exata: \(\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}.\) Se for exata resolva segundo o <a href="mtodo_para_resolver_edo_exatas.html" title="Acesse o conteúdo" class="exe-tooltip plain-tt">método das EDO exatas</a>.<br />3. Se \(\frac{\partial M}{\partial y}\neq \frac{\partial N}{\partial x},\) calcule o fator integrante \(\mu(x,y)\) integrando \(\dfrac{M_y-N_x}{N}\) em relação a \(x\) ou \(\dfrac{N_x-M_y}{M}\) em relação a \(y\)), segundo o caso.<br />4. Multiplicar a EDO toda (à esquerda e à direita da igualdade) pelo fator integrante e conferir que agora é uma EDO exata.<br />5. Resolver a nova EDO exata.<br />6. Escrever a solução geral \(f(x,y)=C\), onde \(C\) é uma constante arbitrária.<br />7. Usar a condição inicial, se disponível, para encontrar a solução particular (substituindo a condição inicial e calculando o valor de \(C\)).<br /><br /></p>
+<p>A continuação propomos alguns exercícios para você treinar. Força!!</p>
+<p><img src="1.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />Verifique que a seguinte equação diferencial não é exata e determine sua solução geral.</p>
+<p>\[\left(y^2x+x\right)dx-\left(yx^2\right)dy=0\]</p>
+<p><img src="2.PNG" alt="" width="59" height="59" style="margin: 0px 10px 0px 10px;" />Se você resolveu a questão anterior utilizando um fator integrante \(\mu(x)\), resolva utilizando um fator integrante \(\mu(y),\) ou vise-versa. O que você conclui a partir disso?</p>
+<p></p>
+<div id="tcae1b565-cea5-2757-47a8-618b6985b5ae" class="exe-dialog-text js-hidden">
+<p>Isso é possível porque \(\dfrac{\partial f}{\partial y}=N(x,y)\) já que a EDO é exata.</p>
+</div>
+<div id="t0ee9eea9-0a3f-7750-284f-1221d008c66f" class="exe-dialog-text js-hidden">
+<p>\(g(y)\) somente depende de \(y\), portanto você deve poder cortar todo o que tiver \(x\) da equação. Se não conseguir, alguma coisa estará errada!</p>
+</div>
+<div id="te73d3c06-0891-d57f-d73a-c5b3d381a613" class="exe-dialog-text js-hidden">
+<p>As primitivas de uma função de uma variável diferem em uma constante. Isto é, todas são da forma \(F(x)=\int f(x) dx + K\). Isso porque, ao derivar \(F(x)\) em relação a \(x\), fica somente \(f(x)\), pois a derivada de uma constante é zero.<br />Já quando você integra uma função de duas variáveis \(f(x,y)\) em relação \(x\), essa constante \(K\) agora vira uma função da outra variável \(y\). Isto é, \(F(x,y)=\int f(x,y)\,dx + g(y)\). Isso porque, ao derivar \(F(x,y)\) em relação a \(x\), fica somente \(f(x,y)\), pois a derivada de \(g(y)\) em relação a \(x\) é zero.<br />Analogamente, se integramos \(f(x,y)\) em relação \(y\), essa constante \(K\) agora vira uma função da outra variável \(x\). Isto é, \(F(x,y)=\int f(x,y)\,dy + h(x)\). Isso porque, ao derivar \(F(x,y)\) em relação a \(y\), fica somente \(f(x,y)\), pois a derivada de \(h(x)\) em relação a \(y\) é zero.</p>
+</div></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Solução" /></div><div class="feedback js-feedback js-hidden"><p>\[\left(y^2x+x\right)dx-\left(yx^2\right)dy=0\]</p>
+<p>Começamos por verificar: \( \dfrac{\partial{M}}{\partial{y}}=\dfrac{\partial{N}}{\partial{x}} \) ?</p>
+<p>Temos \(M(x,y)= y^2x+x \;\) e \(\;N(x,y)=yx^2. \)</p>
+<p>Calculando as parciais obtemos:</p>
+<p>\(\dfrac{\partial{M}}{\partial{y}}=2xy\)</p>
+<p>\(\dfrac{\partial{N}}{\partial{x}}=-2xy\)</p>
+<p>\( \dfrac{\partial{M}}{\partial{y}} \ne \dfrac{\partial{N}}{\partial{x}} \). Então precisamos analisar se existe ou não um fator integrante \(\mu(x)\) ou \(\mu\left(y\right)\) que torne a nossa EDO exata.</p>
+<p> \( \dfrac{M_{y}-N_{x}}{N}=\dfrac{2xy-\left(-2xy\right)}{-yx^2}=\dfrac{-4}{x} .\) Depende somente de \(x\), podemos encontrar nosso fator integrante:</p>
+<p>\(\mu(x)=e^{\int{\frac{-4}{x}dx}}=e^{\int{\frac{-4}{x}dx}}=e^{-4\int{\frac{1}{x}dx}}=e^{-4\ln{x}}=e^{\ln{\frac{1}{x^4}}}=\dfrac{1}{x^4}.\)</p>
+<p>Multiplicando a EDO pelo fator encontrado obtemos uma EDO novinha em folha, e também EXATA! Vamos conferir:</p>
+<p>\(\dfrac{1}{x^4}\left(y^2x+x\right)dx-\dfrac{1}{x^4}\left(yx^2\right)dy=0 \Longrightarrow \left(\dfrac{y^2}{x^3}+\frac{1}{x^3}\right)dx-\left(\frac{y}{x^2}\right)dy=0\)</p>
+<p>Agora ficamos com:</p>
+<p>\(M(x,y)=\dfrac{y^2}{x^3}+\frac{1}{x^3}\Longrightarrow \dfrac{\partial{M'}}{\partial{y}}=\dfrac{2y}{x^3}\)<br />\(N(x,y)=-\dfrac{y}{x^2}\Longrightarrow \dfrac{\partial{N'}}{\partial{x}}=\dfrac{2y}{x^3}\)</p>
+<p>\( \dfrac{\partial{M}}{\partial{y}} = \dfrac{\partial{N}}{\partial{x}} =\dfrac{2y}{x^3}.\) Viu? E-x-a-t-a :-D.</p>
+<p>Atenção! Não confunda os novos \(M(x,y)\) e \(N(x,y)\) da EDO multiplicada pelo fator integrante com os antigos da EDO original!</p>
+<p>Caso prefira você pode usar \(M_{novo}(x,y)\) e \(N_{novo}(x,y)\) para não se confundir. Manteremos a mesma nomenclatura para evitar poluir demais.</p>
+<p>Agora respiramos fundo e começamos a integrar.</p>
+<p>Aqui decidimos se vamos integrar \(M(x,y)\) em relação a \(x\) ou \(N(x,y)\) em relação a \(y\). Aconselhamos sempre a escolher a integral mais simples ou a menos complicada. Independente da integral escolhida devemos chegar a mesma solução, caso não erremos nenhuma conta pelo caminho...</p>
+<p>Vamos integrar \(N(x,y)\) em relação a \(y\) e encontrar parte da nossa solução:</p>
+<p>\( f(x,y)=\displaystyle\int{N(x,y)\,dy}=\displaystyle\int{-\dfrac{y}{x^2}dy}=\dfrac{-y^2}{2x^2}+h(x)\)</p>
+<p>Agora derivamos parcialmente em relação a \(x\) e igualamos a \(M(x,y)\):</p>
+<p>\(\dfrac{\partial{f}}{\partial{x}}=\dfrac{\partial}{\partial{x}}\left(\dfrac{-y^2}{2x^2}+h(x)\right)=\dfrac{y^2}{x^3}+h'(x)=\dfrac{y^2}{x^3}+\dfrac{1}{x^3}\Longrightarrow h'(x)=\dfrac{1}{x^3}\Longrightarrow h(x)=\displaystyle\int{\dfrac{1}{x^3}\,dx}=-\dfrac{1}{2x^2}\)</p>
+<p>Finalmente subistituimos \(h(x)\) para encontrarmos nossa solução:</p>
+<p>\(f(x,y)=-\dfrac{y^2}{2x^2}-\dfrac{1}{2x^2}=\dfrac{-y^2-1}{2x^2}=C\) ou  \(f(x,y)=\dfrac{y^2+1}{x^2}=C,\) multiplicando em ambos os lados por \(-2\).</p>
+<p>Fica como dever de casa integrar \(M(x,y)\) em relação a \(x\), derivar a \(f(x,y)\) parcialmente em relação a \(y\), encontrar \(h(y)\) e substituir na \(f(x,y)\) para encontrar a mesma solução. Caso tenha alguma dificuldade peça ajuda a seu(ua) professor(a) ou a seus monitores.</p>
+<p>Se você tentou resolver e encontrou um fator integrante que dependa somente de \(y\), você está redondamente certo! Essa EDO admite dois fatores integrantes! Um caso interessante e um tanto incomum! </p>
+<p>Vamos resolver utilizando \(\mu\left(y\right)\):</p>
+<p>\(\dfrac{N_{x}-M_{y}}{M}=\dfrac{-2xy-2xy}{y^2x+x}=\dfrac{-4xy}{x(y^2+1)}=\dfrac{-4y}{y^2+1}\)</p>
+<p>\(\mu(y)=e^{\int{\frac{-4y}{y^2+1}}dy}=e^{-4\int{\frac{y}{y^2+1}}dy}=e^{-2\ln{\left(y^2+1\right)}}=e^{\ln{\frac{1}{\left(y^2+1\right)^2}}}=\dfrac{1}{\left(y^2+1\right)^2}\)</p>
+<p><a title="Como resolver a integral" class="exe-dialog-link" rel="lightbox" href="#ta8c0d0e7-103c-924c-5a6c-408cedc67730" id="linka8c0d0e7-103c-924c-5a6c-408cedc67730">Como resolver a integral?</a></p>
+<p>Multiplicando nossa EDO pelo fator encontrado:</p>
+<p>\(\dfrac{1}{\left(y^2+1\right)^2}\left(y^2x+x\right)dx-\dfrac{1}{\left(y^2+1\right)^2}\left(yx^2\right)dy=0 \)</p>
+<p>Não parece estar muito bonito... vamos ajeitar!</p>
+<p>\( \dfrac{x\left(y^2+1\right)}{\left(y^2+1\right)^2}dx-\dfrac{yx^2}{\left(y^2+1\right)^2}dy=0 \Longrightarrow \dfrac{x}{\left(y^2+1\right)^2}dx-\dfrac{yx^2}{\left(y^2+1\right)^2}dy =0\)</p>
+<p>Bem melhor! Continuando:</p>
+<p>\(M(x,y)=\dfrac{x}{\left(y^2+1\right)^2}\Longrightarrow \dfrac{\partial{M}}{\partial{y}}=-\dfrac{2xy}{\left(y^2+1\right)^2}\)</p>
+<p>\(N(x,y)=-\dfrac{yx^2}{\left(y^2+1\right)^2}\Longrightarrow \dfrac{\partial{N}}{\partial{x}}=-\dfrac{2xy}{\left(y^2+1\right)^2}\)</p>
+<p>\( \dfrac{\partial{M}}{\partial{y}}=\dfrac{\partial{N}}{\partial{x}}=-\dfrac{2xy}{\left(y^2+1\right)^2}\). Exata!</p>
+<p>Integrando \(M(x,y)\) em relação a \(x\):</p>
+<p>\( f(x,y)=\displaystyle\int{M(x,y)\,dx}=\displaystyle\int{\dfrac{x}{\left(y^2+1\right)}\,dx}=\dfrac{x^2}{2\left(y^2+1\right)}+h(y) \)</p>
+<p>Agora derivamos parcialmente em relação a \(y\) e igualamos a \(N(x,y)\):</p>
+<p>\(\dfrac{\partial{f}}{\partial{y}}=\dfrac{\partial{}}{\partial{y}}\left(\dfrac{x^2}{2\left(y^2+1\right)}+h(y)\right)=-\dfrac{yx^2}{\left(y^2+1\right)^2}+h'(y)=-\dfrac{yx^2}{\left(y^2+1\right)^2}\Longrightarrow h'(y)=0\Longrightarrow h(y)=C \)</p>
+<p>Subsituindo \(h(y)\) e aglutinando as constantes:</p>
+<p>\(f(x,y)=\dfrac{x^2}{2(y^2+1)}=C\) ou \(f(x,y)=\dfrac{x^2}{y^2+1}=C\), multiplicando ambos os dois lados por \(2\).</p>
+<p> Perceba que:</p>
+<p>\(\dfrac{x^2}{y^2+1}=C\Longrightarrow \dfrac{y^2+1}{x^2}=\dfrac{1}{C}\)</p>
+<p>Fazendo \(\dfrac{1}{C}=K,\) onde \(K\) é uma constante real qualquer, temos:</p>
+<p>\( \dfrac{y^2+1}{x^2}=K\)</p>
+<p>Que é a mesma família de soluções encontradas utilizando o fator \(\mu(x)\). Legal, não acha? </p>
+<p>Também fica como dever de casa chegar a mesma solução integrado \(N(x,y)\) em relação a \(y\). Bons estudos!</p>
+<p></p>
+<div id="ta8c0d0e7-103c-924c-5a6c-408cedc67730" class="exe-dialog-text js-hidden">
+<p>\(-4\displaystyle\int{\dfrac{y}{y^2+1}dy=-4\cdot\dfrac{1}{2}\displaystyle\int{\dfrac{1}{u}}du}=-2\ln{u}=\)</p>
+<p>\(-2\ln{\left(y^2+1\right)} \)</p>
+<p>Fazendo por substituição : \(u=y^2+1\Longrightarrow du=2ydy \Longrightarrow dy=\dfrac{du}{2y}\)</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Sob licença</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licença Creative Commons Atribuição Compartilha Igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="mtodo_para_resolver_edo_exatas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="geogebra.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (Nova janela)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

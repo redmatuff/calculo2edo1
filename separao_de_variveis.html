@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
 <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
-<title>Separação de variáveis | Equações Diferenciais Ordinárias de Primeira Ordem </title>
+<title>Separação de variáveis | EDO de Primeira Ordem </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <meta name="author" content="Begoña Alarcón Cotillas" />
 <link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
@@ -21,22 +21,27 @@
 <body class="exe-web-site exe-auto-math" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar navegação</a></p>
-<header id="header" ><div id="headerContent">Equações Diferenciais Ordinárias de Primeira Ordem</div></header>
+<header id="header" ><div id="headerContent">EDO de Primeira Ordem</div></header>
 <nav id="siteNav">
 <ul>
-   <li><a href="index.html" class="daddy main-node">EDO de primeira ordem</a></li>
-   <li><a href="interpretao_geomtrica.html" class="no-ch">Interpretação geométrica</a></li>
+   <li><a href="index.html" class="daddy main-node">Instruções</a></li>
+   <li><a href="o_que__uma_edo_de_primeira_ordem.html" class="no-ch">O que é uma EDO de primeira ordem?</a></li>
    <li id="active"><a href="separao_de_variveis.html" class="active no-ch">Separação de variáveis</a></li>
    <li><a href="lineares.html" class="no-ch">Lineares</a></li>
-   <li><a href="exatas.html" class="no-ch">Exatas</a></li>
-   <li><a href="redutvel_a_exatas.html" class="no-ch">Redutível a exatas</a></li>
-   <li><a href="geogebra_campo_de_direes.html" class="no-ch">Geogebra: Campo de direções</a></li>
+   <li><a href="exatas.html" class="daddy">Exatas</a>
+   <ul class="other-section">
+      <li><a href="mtodo_para_resolver_edo_exatas.html" class="no-ch">Método para resolver EDO exatas</a></li>
+      <li><a href="redutveis_a_exata.html" class="no-ch">Redutíveis a exata</a></li>
+   </ul>
+   </li>
+   <li><a href="geogebra.html" class="no-ch">Geogebra</a></li>
    <li><a href="exerccios.html" class="no-ch">Exercícios</a></li>
+   <li><a href="avalie_o_recurso.html" class="no-ch">Avalie o recurso!</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="interpretao_geomtrica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="lineares.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+<a href="o_que__uma_edo_de_primeira_ordem.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="lineares.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -48,12 +53,12 @@
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
 <div id="ta47_120_2" class="block iDevice_content">
-<div class="exe-text"><p>Como prometido, vamos agora a aprender a resolver EDO! Ebaaaa</p>
-<p>No capítulo anterior resolvemos EDO do tipo \(y'=2x\) calculando sua primitiva \(y(x)=\int\,2x\,dx=x^2+C.\) Lembra? Isso porque a derivada somente dependia da variável \(x\) e podíamos calcular uma primitiva.</p>
+<div class="exe-text"><p>Como prometido, vamos agora a aprender a resolver uma EDO! Ebaaaa</p>
+<p>No ebook de <a href="https://redmatuff.github.io/calculo2edointro/">Introdução às EDO</a> resolvemos equações diferenciais do tipo \(y'=2x\) calculando sua primitiva \(y(x)=\int\,2x\,dx=x^2+C.\) Lembra? Isso porque a derivada somente dependia da variável \(x\) e podíamos calcular uma primitiva.</p>
 <p>Em geral, o método seria:</p>
 <p>Se \(y'=f(x)\), então \(y(x)=\int\,f(x)\,dx=F(x)+C\), onde \(F(x)\) é uma primitiva de \(f(x).\)</p>
-<p>Agora... Também vimos que a expressão geral de uma EDO de primeira ordem é \[y'=f(x,y).\] Ou seja, do lado direito da igualdade aparece a variável independente \(x\) e também a função desconhecida \(y.\) Por exemplo \(y'=xy\). </p>
-<p>O que podemos fazer nesse caso? Bom, dependendo da cara da função \(f(x,y)\), resolveremos a EDO com um método ou outro. As vezes também não dará para resolver algebricamente... E então? Relaxa!! Neste capítulo aprenderemos alguns métodos de resolução de EDO de primeira ordem, nem todos, e todas as EDO poderão ser resolvidas pelos métodos propostos. </p></div>
+<p>Agora... Também vimos que a expressão geral de uma EDO de primeira ordem é \[y'=f(x,y).\] Ou seja, do lado direito da igualdade pode aparecer a variável independente \(x\) e também a função desconhecida \(y.\) Por exemplo \(y'=xy\). </p>
+<p>O que podemos fazer nesse caso? Bom, dependendo da cara da função \(f(x,y)\), resolveremos a EDO com um método ou outro. As vezes também não dará para resolver algebricamente... E então? Relaxa!! Neste ebook aprenderemos alguns métodos de resolução de EDO de primeira ordem, nem todos, e todas as EDO poderão ser resolvidas pelos métodos propostos. </p></div>
 </div>
 </div>
 </div>
@@ -66,12 +71,13 @@
 <div class="iDevice_content_wrapper">
 <div id="ta51_120_2" class="block iDevice_content">
 <div class="exe-text"><p>Vamos ver agora um caso simples do método de separação de variáveis. Esse método se caracteriza porque poderemos "separar" as variáveis da EDO. Isto é, poderemos levar todinho o que depende de \(y\) para o lado esquerdo e todinho o que depende de \(x\) para o lado direito.</p>
-<p>Como funciona o método? Vamos resolver a EDO \[\dfrac{dy}{dx}=xy\] passo a passo, explicando o processo com calma, para você entender certinho a receita do bolo.</p>
+<p>Como funciona o método? </p>
+<p>Vamos resolver a EDO \[\dfrac{dy}{dx}=xy\] passo a passo, explicando o processo com calma, para você entender certinho a receita do bolo.</p>
 <p>Primeiro, <a title="Detalhe!" class="exe-dialog-link" rel="lightbox" href="#t08e203ac-c351-94bb-790d-969f1ab8a8cf" id="link08e203ac-c351-94bb-790d-969f1ab8a8cf">levaremos</a> o que estiver dependendo de \(y\) para o lado esquerdo da igualdade e o que estiver dependendo de \(x\) para o lado direito da igualdade:</p>
 <p>\[\frac{1}{y}\,dy=x\,dx\]</p>
 <p>Agora integramos nos dois lados. Cada lado em relação à variável que indica seu respectivo diferencial, \(dx\) ou \(dy\):</p>
 <p>\[\int\,\frac{1}{y}\,dy=\int\,x\,dx\]</p>
-<p>Detalhe! Os \(dx\) e \(dy\) sempre devem estar multiplicando! Alguma vez viu uma integral do tipo \(\int\,x\,frac{1}{dx}\)? Não, né? Pois... aqui também não! Lembre disso :-)</p>
+<p>Detalhe! Os \(dx\) e \(dy\) sempre devem estar multiplicando! Alguma vez viu uma integral do tipo \(\int\,x\,\frac{1}{dx}\)? Não, né? Pois... aqui também não! Lembre disso :-)</p>
 <p>Resolvendo as integrais:</p>
 <p>\[\ln{|y|}+c_1=\frac{x^2}{2}+c_2\]</p>
 <p>Somando as duas constantes:</p>
@@ -82,16 +88,17 @@
 <p>Tirando o módulo, \[y=\pm c_4e^{\frac{x^2}{2}},\] com \(c_4=e^{c_3}\) uma constante positiva.</p>
 <p>Portanto, a solução geral da EDO \(\dfrac{dy}{dx}=xy\) é:</p>
 <p>\[y=Ce^{\frac{x^2}{2}}, \; x\in \mathbb{R},\] com \(C\) uma constante que pode ser tanto positiva como negativa.</p>
-<p>O campo de vetores é o seguinte. As curvas vermelhas representam as curvas integrais dadas pela solução geral da EDO:</p>
+<p>O campo de direções da EDO é apesentado na figura a seguir. As curvas vermelhas representam as <a href="https://www.instagram.com/p/DJ__F3GMrHx/?next=%2F" target="_blank" title="Aprenda a fazer no Geogebra" rel="noopener">curvas integrais</a>:</p>
 <figure class="exe-figure exe-image" style="width: 300px; text-align: center;"><img src="campoxy.png" alt="" width="300" height="220" style="vertical-align: baseline;" />
-<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Campo de direções \(y'=xy\)</em></span></figcaption>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>Campo de direções da EDO \(y'=xy\)</em></span></figcaption>
 </figure>
 <p>Sacou? Vamos dar agora o método geral.</p>
 <div id="t08e203ac-c351-94bb-790d-969f1ab8a8cf" class="exe-dialog-text js-hidden">
 <p>Nem sempre isso poderá ser feito, ok? Por isso veremos mais do que um método :-)</p>
 </div>
 <div id="t508e8973-5147-ccf7-f213-e3136659fd3c" class="exe-dialog-text js-hidden">
-<p>\(e^{\ln(x)}=x, \; para x&gt;0\), e \(\ln(e^x)=x, \; \forall x\), pois a função \(\ln(x)\) é a inversa da função \(e^x\) e vice-versa</p>
+<p>\(e^{\ln(x)}=x, \;\) para \(\,x&gt;0\), e \(\ln(e^x)=x,\) para todo \(x.\)</p>
+<p>Isso porque a função \(\ln(x)\) é a inversa da função \(e^x\) e vice-versa</p>
 </div></div>
 </div>
 </div>
@@ -206,7 +213,7 @@
 <form name="multi-choice-form-67_95" action="#" onsubmit="return false" class="activity-form">
 <h1 class="js-sr-av">Pergunta</h1>
 <div id="taquestion67_95" class="block question iDevice_content">
-<p><img src="2.PNG" alt="" width="40" height="40" />Qual é a solução geral da EDO \(y' = xy\)?</p>
+<p><img src="2.PNG" alt="" width="40" height="40" />Qual é a solução geral da EDO \(y' = y \sin(x)\)?</p>
 </div>
 <section class="iDevice_answers">
 <h1 class="js-sr-av">Respostas</h1>
@@ -215,7 +222,7 @@
 <label for="i67_98" class="sr-av"><a href="#answer-67_98">Opção 1</a></label><input type="radio" name="option67_95" id="i67_98" class="exe-radio-option exe-radio-option-0-4-67_95-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_98"><div id="taans67_98" class="block iDevice_content">
-<p>\(y = Ce^{-x^2}\)</p>
+<p>\(y = Ce^{\cos(x)}\)</p>
 </div>
 </div>
 </section>
@@ -224,7 +231,7 @@
 <label for="i67_101" class="sr-av"><a href="#answer-67_101">Opção 2</a></label><input type="radio" name="option67_95" id="i67_101" class="exe-radio-option exe-radio-option-1-4-67_95-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_101"><div id="taans67_101" class="block iDevice_content">
-<p>\(y = Ce^{x^2/2}\)</p>
+<p>\(y = Ce^{-\cos(x)}\)</p>
 </div>
 </div>
 </section>
@@ -233,7 +240,7 @@
 <label for="i67_725" class="sr-av"><a href="#answer-67_725">Opção 3</a></label><input type="radio" name="option67_95" id="i67_725" class="exe-radio-option exe-radio-option-2-4-67_95-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_725"><div id="taans67_725" class="block iDevice_content">
-<p>\(y = Cx^2\)</p>
+<p>\(y = C-\cos(x)\)</p>
 </div>
 </div>
 </section>
@@ -242,7 +249,7 @@
 <label for="i67_728" class="sr-av"><a href="#answer-67_728">Opção 4</a></label><input type="radio" name="option67_95" id="i67_728" class="exe-radio-option exe-radio-option-3-4-67_95-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_728"><div id="taans67_728" class="block iDevice_content">
-<p>\(y = C + e^{x^2}\)</p>
+<p>\(y = C + e^{\cos(x)}\)</p>
 </div>
 </div>
 </section>
@@ -251,12 +258,12 @@
 <h1 class="js-sr-av">Feedback</h1>
 <section id="sa0b67_95" class="feedback js-hidden">
 <div id="taf67_98" class=" iDevice_content">
-<p>Errada. O sinal do expoente deveria ser positivo +x^2/2, não −x^2. Tente de novo! Força!</p>
+<p>Errada. O sinal do expoente deveria ser negativo \(-\cos(x)\), não \(\cos(x)\). Tente de novo! Força!</p>
 </div>
 </section>
 <section id="sa1b67_95" class="feedback js-hidden">
 <div id="taf67_101" class=" iDevice_content">
-<p>Correta. Essa já estava feita... Reparou?</p>
+<p>Correta. Muito bem!</p>
 </div>
 </section>
 <section id="sa2b67_95" class="feedback js-hidden">
@@ -294,7 +301,7 @@
 <label for="i67_734" class="sr-av"><a href="#answer-67_734">Opção 1</a></label><input type="radio" name="option67_731" id="i67_734" class="exe-radio-option exe-radio-option-0-4-67_731-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_734"><div id="taans67_734" class="block iDevice_content">
-<p>\(y = \frac{1}{x - 2}\)</p>
+<p>\(y = \frac{1}{\frac{3}{2}-x}\)</p>
 </div>
 </div>
 </section>
@@ -303,7 +310,7 @@
 <label for="i67_737" class="sr-av"><a href="#answer-67_737">Opção 2</a></label><input type="radio" name="option67_731" id="i67_737" class="exe-radio-option exe-radio-option-1-4-67_731-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_737"><div id="taans67_737" class="block iDevice_content">
-<p>\(y = \frac{1}{2 - x}\)</p>
+<p>\(y = \frac{2}{2x-3}\)</p>
 </div>
 </div>
 </section>
@@ -312,7 +319,7 @@
 <label for="i67_742" class="sr-av"><a href="#answer-67_742">Opção 3</a></label><input type="radio" name="option67_731" id="i67_742" class="exe-radio-option exe-radio-option-2-4-67_731-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_742"><div id="taans67_742" class="block iDevice_content">
-<p>\(y = \frac{1}{2x - 1}\)</p>
+<p>\(y = \frac{2}{1-2x}\)</p>
 </div>
 </div>
 </section>
@@ -373,7 +380,7 @@
 <label for="i67_751" class="sr-av"><a href="#answer-67_751">Opção 1</a></label><input type="radio" name="option67_748" id="i67_751" class="exe-radio-option exe-radio-option-0-4-67_748-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_751"><div id="taans67_751" class="block iDevice_content">
-<p>\item (B) \(x = \frac{1}{t - 1}\)</p>
+<p>\(x = \frac{1}{t - 1}\)</p>
 </div>
 </div>
 </section>
@@ -382,7 +389,7 @@
 <label for="i67_754" class="sr-av"><a href="#answer-67_754">Opção 2</a></label><input type="radio" name="option67_748" id="i67_754" class="exe-radio-option exe-radio-option-1-4-67_748-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_754"><div id="taans67_754" class="block iDevice_content">
-<p>\item (D) \(x = \frac{t}{1 + t}\)</p>
+<p>\(x = \frac{t}{1 + t}\)</p>
 </div>
 </div>
 </section>
@@ -391,7 +398,7 @@
 <label for="i67_757" class="sr-av"><a href="#answer-67_757">Opção 3</a></label><input type="radio" name="option67_748" id="i67_757" class="exe-radio-option exe-radio-option-2-4-67_748-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_757"><div id="taans67_757" class="block iDevice_content">
-<p>\item (C) \(x = \frac{1}{1 - t}\)</p>
+<p>\(x = \frac{1}{1 - t}\)</p>
 </div>
 </div>
 </section>
@@ -400,7 +407,7 @@
 <label for="i67_760" class="sr-av"><a href="#answer-67_760">Opção 4</a></label><input type="radio" name="option67_748" id="i67_760" class="exe-radio-option exe-radio-option-3-4-67_748-multi"/>
 </p>
 <div class="iDevice_answer-content" id="answer-67_760"><div id="taans67_760" class="block iDevice_content">
-<p>\item (A) \(x = \frac{1}{t + 1}\) </p>
+<p> \(x = \frac{1}{t + 1}\) </p>
 </div>
 </div>
 </section>
@@ -450,7 +457,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="interpretao_geomtrica.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="lineares.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
+<a href="o_que__uma_edo_de_primeira_ordem.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="lineares.html" class="next"><span>Seguinte<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
